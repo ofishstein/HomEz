@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/lrg_margin"
+    tools:context="com.is4300.homez.activity.onboarding.NewHouseFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/newHousePrompt"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_house_prompt"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:lines="2"
+        android:lineSpacingExtra="@dimen/sm_margin"
+        android:gravity="center"/>
+
+    <EditText
+        android:layout_below="@+id/newHousePrompt"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/houseName"
+        style="@style/customEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lrg_margin"
+        android:layout_marginBottom="@dimen/lrg_margin"
+        android:layout_marginEnd="@dimen/sm_margin"
+        android:layout_marginStart="@dimen/sm_margin"
+        android:ems="10"
+        android:hint="@string/house_name"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/newHouseNote"
+        android:layout_below="@+id/houseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_house_note"
+        android:lines="2"
+        android:lineSpacingExtra="@dimen/sm_margin"
+        android:gravity="center"/>
+
+
+    <Button
+        android:id="@+id/doneNewButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        style="@style/customButton"
+        android:text="@string/done" />
+
+</RelativeLayout>

@@ -1,56 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.is4300.homez.activity.onboarding.LoginActivity"
-    tools:layout_editor_absoluteY="81dp">
+    android:layout_marginStart="50dp"
+    android:layout_marginEnd="50dp"
+    tools:context="com.is4300.homez.activity.onboarding.LoginActivity">
 
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_marginTop="130dp"
+        android:id="@+id/loginAppTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <Button
-        android:id="@+id/buttonLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonRegister"
-        app:layout_constraintStart_toStartOf="@+id/editText2" />
-
-    <Button
-        android:id="@+id/buttonRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:text="Register"
-        app:layout_constraintEnd_toEndOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/lrg_margin"
+        android:text="@string/app_name"
+        android:textSize="86sp"
+        android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
+        android:id="@+id/loginEmail"
+        android:layout_below="@+id/loginAppTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="135dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="@dimen/med_margin"
+        android:layout_marginStart="@dimen/sm_margin"
+        android:layout_marginEnd="@dimen/sm_margin"
+        style="@style/customEditText"
+        android:hint="@string/email_address" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
+        android:id="@+id/loginPassword"
+        android:layout_below="@+id/loginEmail"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
         android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        android:layout_marginBottom="@dimen/lrg_margin"
+        android:layout_marginStart="@dimen/sm_margin"
+        android:layout_marginEnd="@dimen/sm_margin"
+        style="@style/customEditText"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/loginPassword"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/customButton"
+            android:layout_weight="1"
+            android:text="@string/login" />
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/customButton"
+            android:layout_weight="1"
+            android:text="@string/register" />
+    </LinearLayout>
+
+</RelativeLayout>
