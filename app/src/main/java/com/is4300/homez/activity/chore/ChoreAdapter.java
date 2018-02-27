@@ -22,7 +22,7 @@ public class ChoreAdapter extends ArrayAdapter<ChoreModel>{
 
 
     public ChoreAdapter(Context context, ChoreModel[] resource) {
-        super(context, R.layout.activity_chore, resource);
+        super(context, R.layout.one_chore, resource);
         this.context = context;
         this.modelItems = resource;
         }
@@ -32,7 +32,7 @@ public class ChoreAdapter extends ArrayAdapter<ChoreModel>{
 
         LayoutInflater inflater = ((Activity)context).getLayoutInflater();
 
-        convertView = inflater.inflate(R.layout.activity_chore, parent, false);
+        convertView = inflater.inflate(R.layout.one_chore, parent, false);
 
         TextView name = convertView.findViewById(R.id.textView1);
 

@@ -24,8 +24,8 @@ public class ChoreActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chore);
 
+        setContentView(R.layout.activity_chore);
         lv = findViewById(R.id.all_list);
 
         modelItems = new ChoreModel[5];
