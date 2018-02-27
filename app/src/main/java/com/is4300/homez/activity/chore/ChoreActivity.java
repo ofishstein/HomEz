@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.is4300.homez.R;
+import com.is4300.homez.activity.onboarding.RoommateModel;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -16,6 +17,8 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.widget.ListView;
+
+import static com.is4300.homez.activity.chore.ChoreModel.Recur.WEEKLY;
 
 public class ChoreActivity extends Activity {
     ListView lv;
@@ -29,11 +32,11 @@ public class ChoreActivity extends Activity {
         lv = findViewById(R.id.all_list);
 
         modelItems = new ChoreModel[5];
-        modelItems[0] = new ChoreModel("Clean Room", 0, new SimpleDateFormat("1/1/1"));
-        modelItems[1] = new ChoreModel("Empty Dishwasher", 1, new SimpleDateFormat("1/1/1"));
-        modelItems[2] = new ChoreModel("Swab the Poopdeck", 1, new SimpleDateFormat("1/1/1"));
-        modelItems[3] = new ChoreModel("Buy Toilet Paper", 0, new SimpleDateFormat("1/1/1"));
-        modelItems[4] = new ChoreModel("Take Out Trash", 1, new SimpleDateFormat("1/1/1"));
+        modelItems[0] = new ChoreModel("Clean Room", 0, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard"));
+        modelItems[1] = new ChoreModel("Empty Dishwasher", 1, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard"));
+        modelItems[2] = new ChoreModel("Swab the Poopdeck", 1, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard"));
+        modelItems[3] = new ChoreModel("Buy Toilet Paper", 0, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard"));
+        modelItems[4] = new ChoreModel("Take Out Trash", 1, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard"));
 
         ChoreAdapter adapter = new ChoreAdapter(this, modelItems);
         lv.setAdapter(adapter);
