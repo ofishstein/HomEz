@@ -8,20 +8,21 @@ import java.util.Date;
  */
 
 public class ChoreModel {
-    String name;
-    int value; /* 0 -&gt; checkbox disable, 1 -&gt; checkbox enable */
-    SimpleDateFormat date;
+    String name; // name of chore
+    int complete; // 0 = incomplete, 1 = complete
+    SimpleDateFormat date; // due date of chore, //TODO change format later
 
-    ChoreModel(String name, int value, SimpleDateFormat date){
+
+    ChoreModel(String name, int complete, SimpleDateFormat date){
         this.name = name;
-        this.value = value;
+        this.complete = complete;
         this.date = date;
     }
     public String getName(){
         return this.name;
     }
     public int getValue(){
-        return this.value;
+        return this.complete;
     }
     public SimpleDateFormat getDate() {return this.date; }
 
