@@ -7,7 +7,9 @@ import android.widget.ListView;
 
 import com.is4300.homez.R;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import android.os.Bundle;
@@ -18,20 +20,26 @@ import android.widget.ListView;
 public class ChoreActivity extends Activity {
     ListView lv;
     ChoreModel[] modelItems;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chore);
-        lv = (ListView) findViewById(R.id.all_list);
+
+        lv = findViewById(R.id.all_list);
+
         modelItems = new ChoreModel[5];
-        modelItems[0] = new ChoreModel("pizza", 0);
-        modelItems[1] = new ChoreModel("burger", 1);
-        modelItems[2] = new ChoreModel("olives", 1);
-        modelItems[3] = new ChoreModel("orange", 0);
-        modelItems[4] = new ChoreModel("tomato", 1);
+        modelItems[0] = new ChoreModel("Clean Room", 0, new SimpleDateFormat("1/1/1"));
+        modelItems[1] = new ChoreModel("Empty Dishwasher", 1, new SimpleDateFormat("1/1/1"));
+        modelItems[2] = new ChoreModel("Swab the Poopdeck", 1, new SimpleDateFormat("1/1/1"));
+        modelItems[3] = new ChoreModel("Buy Toilet Paper", 0, new SimpleDateFormat("1/1/1"));
+        modelItems[4] = new ChoreModel("Take Out Trash", 1, new SimpleDateFormat("1/1/1"));
+
         ChoreAdapter adapter = new ChoreAdapter(this, modelItems);
         lv.setAdapter(adapter);
     }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
