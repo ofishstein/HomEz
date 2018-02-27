@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.is4300.homez.activity.SplashActivity">
+    tools:context="com.is4300.homez.activity.SplashActivity"
+    android:background="@color/colorPrimary">
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/splashTitle"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="80sp"
+        android:textSize="85sp"
         android:layout_centerInParent="true"
         android:text="@string/app_name" />
 </RelativeLayout>

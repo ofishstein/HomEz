@@ -11,8 +11,8 @@
         android:id="@+id/choreHeading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="@dimen/med_margin"
         android:background="@android:color/white"
-        android:padding="10dp"
+        android:padding="@dimen/med_margin"
         android:text="@string/title_activity_chore" />
 </RelativeLayout>

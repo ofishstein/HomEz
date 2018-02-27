@@ -19,28 +19,28 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/med_margin"
             android:orientation="vertical">
 
             <include layout="@layout/dash_module_status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp" />
+                android:layout_marginBottom="@dimen/med_margin" />
 
             <include layout="@layout/dash_module_chore"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="@dimen/med_margin"/>
 
             <include layout="@layout/dash_module_bill_split"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="@dimen/med_margin"/>
 
             <include layout="@layout/dash_module_calendar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="@dimen/med_margin"/>
         </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

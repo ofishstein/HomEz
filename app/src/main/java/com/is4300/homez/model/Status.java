@@ -5,4 +5,5 @@ package com.is4300.homez.model;
  */
 
 public class Status {
+    public String userName;
 }
