@@ -9,42 +9,59 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.RegisterActivity"
-            android:label="@string/title_activity_register"
-            android:parentActivityName=".activity.LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.is4300.homez.activity.LoginActivity" />
-        </activity>
-        <activity android:name=".activity.DashboardActivity" />
         <activity
             android:name=".activity.SplashActivity"
-            android:label="@string/title_activity_splash"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:noHistory="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.ChoreActivity" />
-        <activity android:name=".activity.StatusActivity" />
+        <activity android:name=".activity.onboarding.LoginActivity"
+            android:label="@string/app_name"/>
         <activity
-            android:name=".activity.CalendarActivity"
+            android:name=".activity.onboarding.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:parentActivityName=".activity.onboarding.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.is4300.homez.activity.onboarding.LoginActivity" />
+        </activity>
+        <activity android:name=".activity.DashboardActivity"
+            android:label="@string/app_name"/>
+        <activity android:name=".activity.chore.ChoreActivity"
+            android:label="@string/title_activity_chore"
+            android:parentActivityName=".activity.DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.is4300.homez.activity.DashboardActivity" />
+        </activity>
+        <activity android:name=".activity.status.StatusActivity"
+            android:label="@string/title_activity_status"
+            android:parentActivityName=".activity.DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.is4300.homez.activity.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".activity.calendar.CalendarActivity"
             android:label="@string/title_activity_calendar"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.BillSplitActivity" />
-        <activity
-            android:name=".activity.SettingsActivity"
+            android:parentActivityName=".activity.DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.is4300.homez.activity.DashboardActivity" />
+        </activity>
+        <activity android:name=".activity.billsplit.BillSplitActivity"
+            android:label="@string/title_activity_bill_split"
+            android:parentActivityName=".activity.DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.is4300.homez.activity.DashboardActivity" />
+        </activity>
+        <activity android:name=".activity.settings.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:parentActivityName=".activity.DashboardActivity">
             <meta-data
@@ -52,5 +69,4 @@
                 android:value="com.is4300.homez.activity.DashboardActivity" />
         </activity>
     </application>
-
 </manifest>
