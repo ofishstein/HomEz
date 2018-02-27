@@ -9,7 +9,7 @@ public class RoommateModel {
     String last; // last name
 
 
-    RoommateModel(String first, String last){
+    public RoommateModel(String first, String last){
         this.first = first;
         this.last = last;
     }
