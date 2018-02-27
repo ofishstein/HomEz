@@ -22,24 +22,28 @@ public class ChoreAdapter extends ArrayAdapter<ChoreModel>{
 
 
     public ChoreAdapter(Context context, ChoreModel[] resource) {
-        super(context, R.layout.one_chore,resource);
-        // TODO Auto-generated constructor stub
+        super(context, R.layout.activity_chore, resource);
         this.context = context;
         this.modelItems = resource;
         }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // TODO Auto-generated method stub
+
         LayoutInflater inflater = ((Activity)context).getLayoutInflater();
-        convertView = inflater.inflate(R.layout.one_chore, parent, false);
-        TextView name = (TextView) convertView.findViewById(R.id.textView1);
-        CheckBox cb = (CheckBox) convertView.findViewById(R.id.checkBox1);
+
+        convertView = inflater.inflate(R.layout.activity_chore, parent, false);
+
+        TextView name = convertView.findViewById(R.id.textView1);
+
+        CheckBox cb = convertView.findViewById(R.id.checkBox1);
+
         name.setText(modelItems[position].getName());
+
         if(modelItems[position].getValue() == 1)
-        cb.setChecked(true);
+            cb.setChecked(true);
         else
-        cb.setChecked(false);
+            cb.setChecked(false);
         return convertView;
         }
 }
