@@ -9,20 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".activity.SplashActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:noHistory="true" >
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.onboarding.LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name"/>
+        <activity
+            android:name=".activity.onboarding.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.onboarding.RegisterActivity"
             android:label="@string/title_activity_register"
@@ -31,16 +32,19 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.is4300.homez.activity.onboarding.LoginActivity" />
         </activity>
-        <activity android:name=".activity.DashboardActivity"
-            android:label="@string/app_name"/>
-        <activity android:name=".activity.chore.ChoreActivity"
+        <activity
+            android:name=".activity.DashboardActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activity.chore.ChoreActivity"
             android:label="@string/title_activity_chore"
             android:parentActivityName=".activity.DashboardActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.is4300.homez.activity.DashboardActivity" />
         </activity>
-        <activity android:name=".activity.status.StatusActivity"
+        <activity
+            android:name=".activity.status.StatusActivity"
             android:label="@string/title_activity_status"
             android:parentActivityName=".activity.DashboardActivity">
             <meta-data
@@ -55,19 +59,30 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.is4300.homez.activity.DashboardActivity" />
         </activity>
-        <activity android:name=".activity.billsplit.BillSplitActivity"
+        <activity
+            android:name=".activity.billsplit.BillSplitActivity"
             android:label="@string/title_activity_bill_split"
             android:parentActivityName=".activity.DashboardActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.is4300.homez.activity.DashboardActivity" />
         </activity>
-        <activity android:name=".activity.settings.SettingsActivity"
+        <activity
+            android:name=".activity.settings.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:parentActivityName=".activity.DashboardActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.is4300.homez.activity.DashboardActivity" />
         </activity>
+        <activity android:name=".activity.onboarding.HouseActivity"
+            android:label="@string/title_activity_house"
+            android:parentActivityName=".activity.onboarding.RegisterActivity"
+            android:noHistory="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.is4300.homez.activity.DashboardActivity" />
+        </activity>
     </application>
+
 </manifest>

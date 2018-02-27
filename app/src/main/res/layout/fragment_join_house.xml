@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/lrg_margin"
+    tools:context="com.is4300.homez.activity.onboarding.JoinHouseFragment">
+
+
+    <TextView
+        android:id="@+id/joinHousePrompt"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/join_house_prompt"
+        android:textSize="20sp"
+        android:lines="2"
+        android:textStyle="bold"
+        android:lineSpacingExtra="@dimen/sm_margin"
+        android:gravity="center"/>
+
+    <EditText
+        android:layout_marginTop="@dimen/lrg_margin"
+        android:layout_below="@+id/joinHousePrompt"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/houseId"
+        style="@style/customEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lrg_margin"
+        android:layout_marginEnd="@dimen/sm_margin"
+        android:layout_marginStart="@dimen/sm_margin"
+        android:ems="10"
+        android:hint="@string/house_id"
+        android:inputType="number"/>
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/houseId"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:lines="2"
+        android:lineSpacingExtra="@dimen/sm_margin"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="@string/join_house_note" />
+
+    <Button
+        android:id="@+id/doneJoinButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        style="@style/customButton"
+        android:text="@string/done" />
+
+</RelativeLayout>

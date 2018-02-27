@@ -1,11 +1,40 @@
 <resources>
     <!-- Title Resources -->
     <string name="app_name">HomEz</string>
-    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_register">Create Account</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_activity_calendar">Calendar</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_chore">Chores</string>
     <string name="title_activity_status">Status</string>
     <string name="title_activity_bill_split">Bill Split</string>
+    <string name="title_activity_house">Choose House</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="join_house">Join House</string>
+    <string name="new_house">New House</string>
+    <string name="join_house_prompt">
+        "House already set up?\n Join it here!"
+    </string>
+    <string name="join_house_note">
+        "House IDs are six digits long and can be found under:\n"
+        "Dashboard &#x2192; Settings"
+    </string>
+    <string name="new_house_prompt">
+        "First roommate here?\nCreate a new house!"
+    </string>
+    <string name="new_house_note">
+        "If your roommates already use HomEz,\n"
+        "ask them for the House ID and enter it in Join House"
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="done">Done</string>
+    <string name="house_id">House ID</string>
+    <string name="house_name">House Name</string>
+    <string name="welcome">Welcome!</string>
 </resources>
