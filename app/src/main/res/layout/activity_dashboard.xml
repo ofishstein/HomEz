@@ -27,17 +27,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/med_margin" />
 
+            <include layout="@layout/dash_module_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/med_margin"/>
+
             <include layout="@layout/dash_module_chore"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/med_margin"/>
 
             <include layout="@layout/dash_module_bill_split"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/med_margin"/>
-
-            <include layout="@layout/dash_module_calendar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/med_margin"/>

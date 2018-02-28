@@ -7,13 +7,19 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 
+import com.is4300.homez.HomEzApp;
 import com.is4300.homez.R;
 import com.is4300.homez.activity.billsplit.BillSplitActivity;
 import com.is4300.homez.activity.calendar.CalendarActivity;
 import com.is4300.homez.activity.chore.ChoreActivity;
 import com.is4300.homez.activity.settings.SettingsActivity;
 import com.is4300.homez.activity.status.StatusActivity;
+import com.is4300.homez.model.Status;
+import com.is4300.homez.util.UiUtils;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,12 +34,15 @@ public class DashboardActivity extends AppCompatActivity {
     View statusModule;
     @BindView(R.id.choreModule)
     View choreModule;
+    @BindView(R.id.statusList)
+    ListView statusListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         ButterKnife.bind(this);
+        setUpStatusList();
         setOnClickListeners();
     }
 
@@ -53,6 +62,13 @@ public class DashboardActivity extends AppCompatActivity {
         }
 
         return true;
+    }
+
+    private void setUpStatusList() {
+        List<Status> statuses = ((HomEzApp) getApplicationContext()).statusManager.getHomeUsers();
+        StatusArrayAdapter arrayAdapter = new StatusArrayAdapter(this, R.layout.item_user_status, statuses);
+        statusListView.setAdapter(arrayAdapter);
+        UiUtils.setListViewHeightBasedOnItems(statusListView);
     }
 
     private void setOnClickListeners() {

@@ -12,9 +12,11 @@
         android:id="@+id/calendarHeading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lrg_margin"
+        android:layout_marginStart="@dimen/lrg_margin"
+        android:layout_marginBottom="@dimen/med_margin"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_margin="@dimen/med_margin"
-        android:padding="@dimen/med_margin"
         android:text="@string/title_activity_calendar" />
 
 </RelativeLayout>

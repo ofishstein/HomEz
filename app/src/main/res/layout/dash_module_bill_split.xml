@@ -11,10 +11,32 @@
         android:id="@+id/billSplitHeading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/med_margin"
+        android:layout_marginTop="@dimen/lrg_margin"
+        android:layout_marginStart="@dimen/lrg_margin"
+        android:layout_marginBottom="@dimen/med_margin"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:padding="@dimen/med_margin"
         android:text="@string/title_activity_bill_split" />
+
+    <TextView
+        android:id="@+id/yourBalanceLabel"
+        android:layout_below="@+id/billSplitHeading"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/lrg_margin"
+        android:layout_marginEnd="@dimen/lrg_margin"
+        android:layout_marginBottom="@dimen/lrg_margin"
+        android:layout_height="wrap_content"
+        android:text="@string/your_balance" />
+
+    <TextView
+        android:id="@+id/yourBalance"
+        android:layout_toEndOf="@+id/yourBalanceLabel"
+        android:layout_alignBaseline="@+id/yourBalanceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/lrg_margin"
+        android:textColor="@color/green"
+        android:text="$47.00" />
 
 
 </RelativeLayout>

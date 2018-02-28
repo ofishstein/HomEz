@@ -12,9 +12,20 @@
         android:id="@+id/statusHeading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/med_margin"
+        android:layout_marginTop="@dimen/lrg_margin"
+        android:layout_marginStart="@dimen/lrg_margin"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:padding="@dimen/med_margin"
         android:text="@string/title_activity_status" />
+
+    <ListView
+        android:id="@+id/statusList"
+        android:layout_below="@+id/statusHeading"
+        android:layout_marginStart="@dimen/lrg_margin"
+        android:layout_marginEnd="@dimen/lrg_margin"
+        android:layout_marginBottom="@dimen/lrg_margin"
+        android:layout_width="match_parent"
+        android:isScrollContainer="false"
+        android:layout_height="match_parent" />
 
 </RelativeLayout>
