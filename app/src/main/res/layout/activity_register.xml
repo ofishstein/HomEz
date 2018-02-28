@@ -1,10 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/lrg_margin"
+    android:textStyle="bold"
     tools:context="com.is4300.homez.activity.onboarding.RegisterActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/createPrompt"
+        android:layout_marginTop="@dimen/med_margin"
+        android:layout_marginBottom="@dimen/med_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textSize="30sp"
+        android:gravity="center"/>
+
+    <EditText
+        android:layout_below="@+id/createPrompt"
+        android:id="@+id/firstName"
+        style="@style/customEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lrg_margin"
+        android:layout_marginEnd="@dimen/sm_margin"
+        android:layout_marginStart="@dimen/sm_margin"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/lastName"
+        android:layout_below="@+id/firstName"
+        style="@style/customEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lrg_margin"
+        android:layout_marginEnd="@dimen/sm_margin"
+        android:layout_marginStart="@dimen/sm_margin"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_below="@+id/lastName"
+        style="@style/customEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lrg_margin"
+        android:layout_marginEnd="@dimen/sm_margin"
+        android:layout_marginStart="@dimen/sm_margin"
+        android:ems="10"
+        android:hint="@string/email_address"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_below="@+id/email"
+        style="@style/customEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lrg_margin"
+        android:layout_marginEnd="@dimen/sm_margin"
+        android:layout_marginStart="@dimen/sm_margin"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/confirmPassword"
+        android:layout_below="@+id/password"
+        style="@style/customEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lrg_margin"
+        android:layout_marginEnd="@dimen/sm_margin"
+        android:layout_marginStart="@dimen/sm_margin"
+        android:ems="10"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword" />
+
+
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        style="@style/customButton"
+        android:text="Continue" />
+</android.widget.RelativeLayout>
 
