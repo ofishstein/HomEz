@@ -29,5 +29,6 @@ public class HomEzApp extends Application {
 
         statusManager.generateMockStatusList();
         choreManager.generateMockChoreList();
+        calendarManager.generateMockEventsList();
     }
 }

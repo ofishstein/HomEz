@@ -12,6 +12,7 @@ import android.widget.ListView;
 import com.is4300.homez.HomEzApp;
 import com.is4300.homez.R;
 import com.is4300.homez.activity.adapters.DashChoreArrayAdapter;
+import com.is4300.homez.activity.adapters.DashEventArrayAdapter;
 import com.is4300.homez.activity.adapters.StatusArrayAdapter;
 import com.is4300.homez.activity.billsplit.BillSplitActivity;
 import com.is4300.homez.activity.calendar.CalendarActivity;
@@ -19,6 +20,7 @@ import com.is4300.homez.activity.chore.ChoreActivity;
 import com.is4300.homez.activity.settings.SettingsActivity;
 import com.is4300.homez.activity.status.StatusActivity;
 import com.is4300.homez.model.Chore;
+import com.is4300.homez.model.EventMock;
 import com.is4300.homez.model.Status;
 import com.is4300.homez.util.UiUtils;
 
@@ -41,6 +43,9 @@ public class DashboardActivity extends AppCompatActivity {
     ListView statusListView;
     @BindView(R.id.choreList)
     ListView choreListView;
+    @BindView(R.id.eventList)
+    ListView eventListView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,24 +54,24 @@ public class DashboardActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         setUpStatusList();
         setUpChoreList();
+        setUpEventList();
         setOnClickListeners();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_dashboard, menu);
+        inflater.inflate(R.menu.menu_settings, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if( item.getItemId() == R.id.settingsMenu) {
+        if(item.getItemId() == R.id.settingsMenu) {
                 Intent intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
 
         }
-
         return true;
     }
 
@@ -83,6 +88,16 @@ public class DashboardActivity extends AppCompatActivity {
         choreListView.setAdapter(arrayAdapter);
         UiUtils.setListViewHeightBasedOnItems(choreListView);
     }
+
+    private void setUpEventList() {
+        List<EventMock> events = ((HomEzApp) getApplicationContext()).calendarManager.mockEventsList;
+        DashEventArrayAdapter arrayAdapter = new DashEventArrayAdapter(this, R.layout.item_dash_calendar_event, events);
+        eventListView.setAdapter(arrayAdapter);
+        UiUtils.setListViewHeightBasedOnItems(eventListView);
+    }
+
+    private void setUpAccountBalance() {}
+
 
     private void setOnClickListeners() {
         this.billSplitModule.setOnClickListener(new View.OnClickListener() {

@@ -26,7 +26,7 @@ public class ChoreManager {
     }
 
     public void generateMockChoreList() {
-        mockChoreList = Chore.generateChoreList();
+        mockChoreList = Chore.generateMockChoreList();
     }
 
     public List<Chore> getUpcomingChores() {

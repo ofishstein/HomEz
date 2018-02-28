@@ -19,4 +19,15 @@
         android:textStyle="bold"
         android:text="@string/title_activity_calendar" />
 
+    <ListView
+        android:id="@+id/eventList"
+        android:layout_below="@+id/calendarHeading"
+        android:layout_marginStart="@dimen/lrg_margin"
+        android:layout_marginEnd="@dimen/lrg_margin"
+        android:layout_marginBottom="@dimen/lrg_margin"
+        android:layout_width="match_parent"
+        android:isScrollContainer="false"
+        android:clickable="false"
+        android:layout_height="match_parent" />
+
 </RelativeLayout>

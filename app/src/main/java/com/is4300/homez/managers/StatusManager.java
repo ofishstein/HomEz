@@ -2,7 +2,6 @@ package com.is4300.homez.managers;
 
 import com.is4300.homez.model.Status;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +26,7 @@ public class StatusManager {
     }
 
     public void generateMockStatusList() {
-        mockStatusList = Status.generateStatusList();
+        mockStatusList = Status.generateMockStatusList();
     }
 
     public List<Status> getHomeUsers() {

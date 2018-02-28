@@ -41,7 +41,7 @@ public class Chore {
     public String getAssignee() { return this.assignee;}
     public RecurType getRecurrence() { return this.recurrence; }
 
-    public static List<Chore> generateChoreList() {
+    public static List<Chore> generateMockChoreList() {
         List<Chore> choresList = new ArrayList<>();
 
         choresList.add(new Chore("Clean Room", false, new SimpleDateFormat("1/1/1"), "Ian Leonard", RecurType.WEEKLY));

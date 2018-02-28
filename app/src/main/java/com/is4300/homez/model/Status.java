@@ -19,9 +19,8 @@ public class Status {
         this.timeAway = timeAway;
     }
 
-    public static List<Status> generateStatusList() {
+    public static List<Status> generateMockStatusList() {
         List<Status> statusList = new ArrayList<>();
-
 
         statusList.add(new Status("Ian Leonard", StatusType.HOME, 0));
         statusList.add(new Status("Connor Rouan", StatusType.HOME, 0));
