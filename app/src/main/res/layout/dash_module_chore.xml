@@ -5,14 +5,14 @@
     android:clickable="true"
     android:focusable="true"
     android:id="@+id/choreModule"
-    android:background="@color/colorPrimaryLight">
+    android:background="@drawable/background_edit_text">
 
     <TextView
         android:id="@+id/choreHeading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/med_margin"
-        android:background="@android:color/white"
+        android:textStyle="bold"
         android:padding="@dimen/med_margin"
         android:text="@string/title_activity_chore" />
 </RelativeLayout>
