@@ -6,15 +6,33 @@
     tools:context="com.is4300.homez.activity.calendar.DayFragment">
 
     <TextView
-        android:id="@+id/temp_day"
+        android:id="@+id/date"
         android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calendar day view"
+        android:text="Today's date:"
         android:textSize="20sp"
         android:textStyle="bold"
         android:lines="2"
         android:lineSpacingExtra="@dimen/sm_margin"
         android:gravity="center"/>
+
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/date"
+        android:layout_marginTop="11dp"
+        android:alwaysDrawnWithCache="true"
+        android:dividerHeight="1dp"
+        android:horizontalSpacing="3dp"
+        android:scrollingCache="true"
+        android:smoothScrollbar="true"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="3dp">
+
+    </ListView>
 
 </RelativeLayout>
