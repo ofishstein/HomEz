@@ -8,6 +8,7 @@
     <string name="title_activity_chore">Chores</string>
     <string name="title_activity_status">Status</string>
     <string name="title_activity_bill_split">Bill Split</string>
+    <string name="title_activity_bill_split_create">Create Charge</string>
     <string name="title_activity_house">Choose House</string>
     <string name="email_address">Email Address</string>
     <string name="password">Password</string>
@@ -30,6 +31,9 @@
         "If your roommates already use HomEz,\n"
         "ask them for the House ID and enter it in Join House"
     </string>
+
+    <string name="Charge">Charge</string>
+    <string name="Pay">Pay</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

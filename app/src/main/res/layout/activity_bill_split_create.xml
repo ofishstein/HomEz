@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/lrg_margin"
+    tools:context="com.is4300.homez.activity.onboarding.HouseActivity">
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/lrg_margin"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/background_tab_bar"
+        app:tabIndicatorHeight="5dp"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white">
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Charge" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Pay" />
+
+    </android.support.design.widget.TabLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tabLayout"
+        android:id="@+id/gridLayout2">
+
+        <EditText
+            android:id="@+id/editText11"
+            android:layout_width="49dp"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/gridLayout2"
+            android:layout_column="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="44dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="$" />
+
+        <EditText
+            android:id="@+id/editText12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/gridLayout2"
+            android:layout_column="2"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="48dp"
+            android:ems="10"
+            android:inputType="textPersonName|number"
+            android:text="0.00" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_column="2"
+            android:layout_marginEnd="16dp"
+            android:layout_row="18"
+            android:text="Charge" />
+
+    </GridLayout>
+
+    <ScrollView
+        android:layout_width="181dp"
+        android:layout_height="107dp"
+        android:layout_alignEnd="@+id/tabLayout"
+        android:layout_alignStart="@+id/tabLayout"
+        android:layout_below="@+id/tabLayout"
+        android:layout_column="2"
+        android:layout_marginTop="143dp"
+        android:layout_row="3"
+        android:id="@+id/scrollView4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="To:" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Atamai Tuiolosega" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Izzi Tripp" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Oli Fishstein" />
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Connor Roaun" />
+
+            <CheckBox
+                android:id="@+id/checkBox5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ian Leonard" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
