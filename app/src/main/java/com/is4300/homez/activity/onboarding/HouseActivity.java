@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.is4300.homez.R;
+import com.is4300.homez.activity.adapters.HousePagerAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

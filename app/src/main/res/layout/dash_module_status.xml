@@ -26,6 +26,7 @@
         android:layout_marginBottom="@dimen/lrg_margin"
         android:layout_width="match_parent"
         android:isScrollContainer="false"
+        android:clickable="false"
         android:layout_height="match_parent" />
 
 </RelativeLayout>

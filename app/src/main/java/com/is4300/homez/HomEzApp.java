@@ -28,5 +28,6 @@ public class HomEzApp extends Application {
         billSplitManager = BillSplitManager.getBillSplitManagerInstance();
 
         statusManager.generateMockStatusList();
+        choreManager.generateMockChoreList();
     }
 }

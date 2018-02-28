@@ -11,11 +11,14 @@ import android.widget.ListView;
 
 import com.is4300.homez.HomEzApp;
 import com.is4300.homez.R;
+import com.is4300.homez.activity.adapters.DashChoreArrayAdapter;
+import com.is4300.homez.activity.adapters.StatusArrayAdapter;
 import com.is4300.homez.activity.billsplit.BillSplitActivity;
 import com.is4300.homez.activity.calendar.CalendarActivity;
 import com.is4300.homez.activity.chore.ChoreActivity;
 import com.is4300.homez.activity.settings.SettingsActivity;
 import com.is4300.homez.activity.status.StatusActivity;
+import com.is4300.homez.model.Chore;
 import com.is4300.homez.model.Status;
 import com.is4300.homez.util.UiUtils;
 
@@ -36,6 +39,8 @@ public class DashboardActivity extends AppCompatActivity {
     View choreModule;
     @BindView(R.id.statusList)
     ListView statusListView;
+    @BindView(R.id.choreList)
+    ListView choreListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +48,7 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
         ButterKnife.bind(this);
         setUpStatusList();
+        setUpChoreList();
         setOnClickListeners();
     }
 
@@ -69,6 +75,13 @@ public class DashboardActivity extends AppCompatActivity {
         StatusArrayAdapter arrayAdapter = new StatusArrayAdapter(this, R.layout.item_user_status, statuses);
         statusListView.setAdapter(arrayAdapter);
         UiUtils.setListViewHeightBasedOnItems(statusListView);
+    }
+
+    private void setUpChoreList() {
+        List<Chore> chores = ((HomEzApp) getApplicationContext()).choreManager.getUpcomingChores();
+        DashChoreArrayAdapter arrayAdapter = new DashChoreArrayAdapter(this, R.layout.item_dash_chore, chores);
+        choreListView.setAdapter(arrayAdapter);
+        UiUtils.setListViewHeightBasedOnItems(choreListView);
     }
 
     private void setOnClickListeners() {
