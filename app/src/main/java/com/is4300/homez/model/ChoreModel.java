@@ -1,9 +1,6 @@
-package com.is4300.homez.activity.chore;
-
-import com.is4300.homez.activity.onboarding.RoommateModel;
+package com.is4300.homez.model;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * Created by ianleonard on 2/27/18.
@@ -25,7 +22,7 @@ public class ChoreModel {
 
 
 
-    ChoreModel(String name, int complete, SimpleDateFormat date, RoommateModel assignee){ //TODO add recurrence
+    public ChoreModel(String name, int complete, SimpleDateFormat date, RoommateModel assignee){ //TODO add recurrence
         this.name = name;
         this.complete = complete;
         this.date = date;
