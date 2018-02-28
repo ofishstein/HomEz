@@ -37,4 +37,7 @@
     <string name="house_id">House ID</string>
     <string name="house_name">House Name</string>
     <string name="welcome">Welcome!</string>
+    <string name="all_chores_prompt">Hello Test</string>
+    <string name="all_chores_note">Hello Test</string>
+
 </resources>

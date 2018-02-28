@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/lrg_margin"
+    tools:context="com.is4300.homez.activity.chore.MyChoresFragment">
+
+
+    <TextView
+        android:id="@+id/myChoresPrompt"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/all_chores_prompt"
+        android:textSize="20sp"
+        android:lines="2"
+        android:textStyle="bold"
+        android:lineSpacingExtra="@dimen/sm_margin"
+        android:gravity="center"/>
+
+    <ListView
+        android:id="@+id/my_chores_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/allChoresPrompt"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:lines="2"
+        android:lineSpacingExtra="@dimen/sm_margin"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="@string/all_chores_note" />
+
+
+</RelativeLayout>
