@@ -17,7 +17,7 @@ import com.is4300.homez.activity.adapters.StatusArrayAdapter;
 import com.is4300.homez.activity.billsplit.BillSplitActivity;
 import com.is4300.homez.activity.calendar.CalendarActivity;
 import com.is4300.homez.activity.chore.ChoreActivity;
-import com.is4300.homez.activity.settings.SettingsActivity;
+import com.is4300.homez.activity.settings.PersonalSettingsActivity;
 import com.is4300.homez.activity.status.StatusActivity;
 import com.is4300.homez.model.Chore;
 import com.is4300.homez.model.EventMock;
@@ -68,7 +68,7 @@ public class DashboardActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.settingsMenu) {
-                Intent intent = new Intent(this, SettingsActivity.class);
+                Intent intent = new Intent(this, PersonalSettingsActivity.class);
                 startActivity(intent);
 
         }

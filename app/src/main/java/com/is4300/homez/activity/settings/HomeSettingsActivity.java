@@ -2,14 +2,13 @@ package com.is4300.homez.activity.settings;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import com.is4300.homez.R;
 
-public class SettingsActivity extends AppCompatActivity {
+public class HomeSettingsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_home_settings);
     }
 }

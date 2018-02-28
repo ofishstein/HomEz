@@ -4,13 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.is4300.homez.activity.status.StatusActivity">
-
-    <ListView
-        android:id="@+id/statusList"
-        android:layout_margin="@dimen/lrg_margin"
-        android:layout_width="match_parent"
-        android:clickable="false"
-        android:layout_height="match_parent" />
+    tools:context="com.is4300.homez.activity.status.StatusSettingsActivity">
 
 </RelativeLayout>
