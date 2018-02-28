@@ -1,24 +1,48 @@
 package com.is4300.homez.activity.chore;
 
+
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import com.is4300.homez.R;
-import com.is4300.homez.activity.onboarding.RoommateModel;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
-import android.os.Bundle;
+public class ChoreActivity extends AppCompatActivity {
+    @BindView(R.id.choreViewPager)
+    ViewPager choreViewPager;
+    @BindView(R.id.choreTabLayout)
+    TabLayout choreTabLayout;
+
+    private ChorePagerAdapter chorePagerAdapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_chore);
+        ButterKnife.bind(this);
+
+        this.chorePagerAdapter = new ChorePagerAdapter(getSupportFragmentManager());
+        this.choreViewPager.setAdapter(chorePagerAdapter);
+        this.choreViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(choreTabLayout));
+        this.choreTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(choreViewPager));
+    }
+}
+
+
+/*
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ListView;
 
-import static com.is4300.homez.activity.chore.ChoreModel.Recur.WEEKLY;
+import com.is4300.homez.R;
+import com.is4300.homez.model.RoommateModel;
+
+import java.text.SimpleDateFormat;
 
 public class ChoreActivity extends Activity {
     ListView lv;
@@ -49,4 +73,4 @@ public class ChoreActivity extends Activity {
         getMenuInflater().inflate(R.menu.menu_dashboard, menu);
         return true;
     }
-}
+}*/
