@@ -7,6 +7,8 @@ import com.is4300.homez.R;
 
 public class BillSplitActivity extends AppCompatActivity {
 
+    private BillSplitAdapter BillSplitAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
