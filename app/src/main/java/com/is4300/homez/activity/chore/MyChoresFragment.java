@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.is4300.homez.HomEzApp;
 import com.is4300.homez.R;
 import com.is4300.homez.model.ChoreModel;
 import com.is4300.homez.model.RoommateModel;
@@ -39,6 +40,7 @@ public class MyChoresFragment extends Fragment {
         return fragment;
     }
 
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -62,6 +64,10 @@ public class MyChoresFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_my_chores, container, false);
         ButterKnife.bind(this, view);
+
+        ((HomEzApp) getActivity().getApplicationContext()).
+
+
 
         return view;
     }
