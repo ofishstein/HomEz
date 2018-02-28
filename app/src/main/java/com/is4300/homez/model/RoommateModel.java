@@ -1,4 +1,4 @@
-package com.is4300.homez.activity.onboarding;
+package com.is4300.homez.model;
 
 /**
  * Created by ianleonard on 2/27/18.
