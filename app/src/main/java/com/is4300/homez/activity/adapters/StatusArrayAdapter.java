@@ -70,16 +70,6 @@ public class StatusArrayAdapter extends ArrayAdapter<Status> {
         return view;
     }
 
-    @Override
-    public boolean areAllItemsEnabled() {
-        return false;
-    }
-
-    @Override
-    public boolean isEnabled(int position) {
-        return false;
-    }
-
     private String formatAwayTime(int minutes) {
         int hrs = minutes / 60;
         int min = minutes % 60;
