@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/lrg_margin"
-    tools:context="com.is4300.homez.activity.onboarding.HouseActivity">
+    tools:context="com.is4300.homez.activity.chore.ChoreActivity">
 
     <android.support.design.widget.TabLayout
-        android:id="@+id/tabLayout"
+        android:id="@+id/choreTabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -24,22 +24,24 @@
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/new_house" />
+            android:text="Mine" />
 
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/join_house" />
+            android:text="All" />
 
     </android.support.design.widget.TabLayout>
 
     <android.support.v4.view.ViewPager
-        android:layout_below="@+id/tabLayout"
-        android:id="@+id/viewPager"
+        android:layout_below="@+id/choreTabLayout"
+        android:id="@+id/choreViewPager"
         android:layout_width="match_parent"
         android:layout_height="fill_parent" />
 </RelativeLayout>
 
+
+<!---
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -93,3 +95,4 @@
     </TabHost>
 </android.support.constraint.ConstraintLayout>
 
+-->

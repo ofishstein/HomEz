@@ -14,6 +14,7 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.is4300.homez.R;
+import com.is4300.homez.model.ChoreModel;
 
 public class ChoreAdapter extends ArrayAdapter<ChoreModel>{
         ChoreModel[]modelItems=null;
