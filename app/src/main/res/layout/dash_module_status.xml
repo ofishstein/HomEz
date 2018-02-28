@@ -6,15 +6,27 @@
     android:layout_height="match_parent"
     android:clickable="true"
     android:focusable="true"
-    android:background="@color/colorPrimaryLight">
+    android:background="@drawable/background_edit_text">
 
     <TextView
         android:id="@+id/statusHeading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/med_margin"
-        android:background="@android:color/white"
-        android:padding="@dimen/med_margin"
+        android:layout_marginTop="@dimen/lrg_margin"
+        android:layout_marginStart="@dimen/lrg_margin"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:text="@string/title_activity_status" />
+
+    <ListView
+        android:id="@+id/statusList"
+        android:layout_below="@+id/statusHeading"
+        android:layout_marginStart="@dimen/lrg_margin"
+        android:layout_marginEnd="@dimen/lrg_margin"
+        android:layout_marginBottom="@dimen/lrg_margin"
+        android:layout_width="match_parent"
+        android:isScrollContainer="false"
+        android:clickable="false"
+        android:layout_height="match_parent" />
 
 </RelativeLayout>

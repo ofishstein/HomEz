@@ -37,4 +37,10 @@
     <string name="house_id">House ID</string>
     <string name="house_name">House Name</string>
     <string name="welcome">Welcome!</string>
+    <string name="your_balance">Your Balance:</string>
+    <string name="do_not_disturb">Do Not Disturb</string>
+    <string name="away">Away</string>
+    <string name="home">Home</string>
+    <string name="dash">-</string>
+    <string name="add">Add</string>
 </resources>
