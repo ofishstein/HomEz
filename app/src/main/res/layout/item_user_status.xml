@@ -2,6 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:focusable="true"
     android:layout_width="match_parent"
     android:paddingBottom="@dimen/med_margin"
     android:paddingTop="@dimen/med_margin"
