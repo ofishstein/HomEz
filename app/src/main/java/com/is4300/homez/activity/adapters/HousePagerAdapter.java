@@ -1,8 +1,11 @@
-package com.is4300.homez.activity.onboarding;
+package com.is4300.homez.activity.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import com.is4300.homez.activity.onboarding.JoinHouseFragment;
+import com.is4300.homez.activity.onboarding.NewHouseFragment;
 
 /**
  * Created by ofishstein on 2/27/18.

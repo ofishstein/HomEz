@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:focusable="false"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="@dimen/med_margin"
+    android:paddingTop="@dimen/med_margin">
+
+    <TextView
+        android:id="@+id/eventTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/med_margin"
+        tools:text="0:00 pm" />
+
+    <TextView
+        android:id="@+id/dashEvent"
+        android:layout_toEndOf="@+id/eventTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/med_margin"
+        android:text="@string/dash" />
+
+    <TextView
+        android:id="@+id/eventName"
+        android:layout_toEndOf="@+id/dashEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Event Name" />
+
+</RelativeLayout>

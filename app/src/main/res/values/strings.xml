@@ -40,4 +40,10 @@
     <string name="all_chores_prompt">Hello Test</string>
     <string name="all_chores_note">Hello Test</string>
 
+    <string name="your_balance">Your Balance:</string>
+    <string name="do_not_disturb">Do Not Disturb</string>
+    <string name="away">Away</string>
+    <string name="home">Home</string>
+    <string name="dash">-</string>
+    <string name="add">Add</string>
 </resources>
