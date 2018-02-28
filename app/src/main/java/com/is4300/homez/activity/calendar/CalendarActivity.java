@@ -30,5 +30,4 @@ public class CalendarActivity extends AppCompatActivity {
         this.calViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(calTabLayout));
         this.calTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(calViewPager));
     }
-
 }
