@@ -4,6 +4,7 @@ package com.is4300.homez.activity.chore;
  * Created by ianleonard on 2/27/18.
  */
 
+
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
