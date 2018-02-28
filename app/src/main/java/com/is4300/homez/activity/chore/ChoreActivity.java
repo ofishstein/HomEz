@@ -32,11 +32,11 @@ public class ChoreActivity extends Activity {
         lv = findViewById(R.id.all_list);
 
         modelItems = new ChoreModel[5];
-        modelItems[0] = new ChoreModel("Clean Room", 0, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard"));
-        modelItems[1] = new ChoreModel("Empty Dishwasher", 1, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard"));
-        modelItems[2] = new ChoreModel("Swab the Poopdeck", 1, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard"));
-        modelItems[3] = new ChoreModel("Buy Toilet Paper", 0, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard"));
-        modelItems[4] = new ChoreModel("Take Out Trash", 1, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard"));
+        modelItems[0] = new ChoreModel("Clean Room", 0, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard", "ian.leonard44@gmail.com"));
+        modelItems[1] = new ChoreModel("Empty Dishwasher", 1, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard", "ian.leonard44@gmail.com"));
+        modelItems[2] = new ChoreModel("Swab the Poopdeck", 1, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard", "ian.leonard44@gmail.com"));
+        modelItems[3] = new ChoreModel("Buy Toilet Paper", 0, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard", "ian.leonard44@gmail.com"));
+        modelItems[4] = new ChoreModel("Take Out Trash", 1, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard", "ian.leonard44@gmail.com"));
 
         ChoreAdapter adapter = new ChoreAdapter(this, modelItems);
         lv.setAdapter(adapter);
