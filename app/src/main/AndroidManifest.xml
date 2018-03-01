@@ -109,6 +109,13 @@
                 android:value="com.is4300.homez.activity.DashboardActivity" />
 
         </activity>
+        <activity android:name=".activity.chore.AddChoreActivity"
+            android:label="New Chore"
+            android:parentActivityName=".activity.chore.ChoreActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.is4300.homez.activity.chore.ChoreActivity" />
+        </activity>
     </application>
 
 </manifest>
