@@ -52,5 +52,7 @@
     <string name="continue_string">Continue</string>
     <string name="add_chore">Add Chore</string>
     <string name="save_chore">Save Chore</string>
+    <string name="remind">Remind</string>
+
 
 </resources>

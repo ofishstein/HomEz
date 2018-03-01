@@ -21,7 +21,7 @@ import butterknife.ButterKnife;
 
 public class MyChoresFragment extends Fragment {
 
-    RoommateModel activeUserMock = new RoommateModel("Ian", "Leonard", "ian.leonard44@gmail.com");
+    String activeUserMock = new String("Ian Leonard");
 
     @BindView(R.id.my_pending_chores_list)
     ListView myPendingChoresList;

@@ -69,7 +69,7 @@ public class ChoreAdapter extends ArrayAdapter<Chore> {
 
 
     public ChoreAdapter(Context context, List<Chore> resource) {
-        super(context, R.layout.one_chore, resource);
+        super(context, R.layout.my_one_chore, resource);
         this.context = context;
         this.modelItems = resource;
         }
@@ -79,7 +79,7 @@ public class ChoreAdapter extends ArrayAdapter<Chore> {
 
         LayoutInflater inflater = LayoutInflater.from(getContext());
 
-        convertView = inflater.inflate(R.layout.one_chore, parent, false);
+        convertView = inflater.inflate(R.layout.my_one_chore, parent, false);
 
         TextView name = convertView.findViewById(R.id.textView1);
 
