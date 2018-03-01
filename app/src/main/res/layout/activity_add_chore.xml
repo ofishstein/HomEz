@@ -33,29 +33,5 @@
         android:hint="Chore Title"
         android:inputType="textPersonName" />
 
-
-    <Spinner
-        android:id="@+id/assigneeSpinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/choreName"
-        android:layout_marginTop="30dp" />
-
-    <DatePicker
-        android:id="@+id/datePicker"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/assigneeSpinner"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:id="@+id/continueButton"
-        style="@style/customButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="Continue" />
-
 </android.widget.RelativeLayout>
 

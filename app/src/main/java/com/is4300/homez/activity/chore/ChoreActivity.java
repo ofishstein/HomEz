@@ -39,14 +39,17 @@ public class ChoreActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_add, menu);
-        return true;
-    }
+    MenuInflater inflater = getMenuInflater();
+    inflater.inflate(R.menu.menu_add, menu);
+    return true;
+}
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.equals(R.menu.menu_add)) {
-            startActivity(new Intent(this, AddChoreActivity.class));
+        if(item.getItemId() == R.id.addMenu) {
+            Intent intent = new Intent(this, AddChoreActivity.class);
+            startActivity(intent);
+
         }
         return true;
     }
