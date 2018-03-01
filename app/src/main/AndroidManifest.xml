@@ -145,7 +145,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.is4300.homez.activity.settings.PersonalSettingsActivity" />
-
         </activity>
     </application>
 
