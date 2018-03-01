@@ -37,6 +37,11 @@
     <string name="house_id">House ID</string>
     <string name="house_name">House Name</string>
     <string name="welcome">Welcome!</string>
+    <string name="my_pending_chores">My Pending Chores</string>
+    <string name="my_completed_chores">My Completed Chores</string>
+    <string name="all_pending_chores">All Pending Chores</string>
+    <string name="all_completed_chores">All Completed Chores</string>
+
     <string name="your_balance">Your Balance:</string>
     <string name="do_not_disturb">Do Not Disturb</string>
     <string name="away">Away</string>
@@ -45,4 +50,9 @@
     <string name="add">Add</string>
     <string name="save_changes">Save Changes</string>
     <string name="continue_string">Continue</string>
+    <string name="add_chore">Add Chore</string>
+    <string name="save_chore">Save Chore</string>
+    <string name="remind">Remind</string>
+
+
 </resources>

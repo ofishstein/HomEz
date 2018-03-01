@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/lrg_margin"
+    android:orientation="vertical"
+    android:textStyle="bold"
+    tools:context="com.is4300.homez.activity.chore.AddChoreActivity">
+
+
+    <TextView
+        android:id="@+id/addChore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_chore"
+        android:textSize="20sp"
+        android:lines="1"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:gravity="left"/>
+
+    <EditText
+        android:id="@+id/choreTitle"
+        android:layout_below="@id/addChore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textSize="14sp"
+        android:ems="10"
+        style="@style/customEditText"
+        android:hint="Chore Title" />
+
+    <!--TODO add assignee-->
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/choreTitle"
+        android:layout_centerHorizontal="true"
+        android:datePickerMode="spinner"
+        android:layout_marginTop="11dp" />
+    <!--TODO add/fix date picker to include day of week-->
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/datePicker"
+        android:layout_centerHorizontal="true"
+        android:datePickerMode="spinner"
+        android:layout_marginTop="11dp" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        style="@style/customButton"
+        android:text="@string/save_chore" />
+
+</android.widget.RelativeLayout>
+

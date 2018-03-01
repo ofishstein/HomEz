@@ -101,14 +101,23 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.is4300.homez.activity.DashboardActivity" />
         </activity>
-        <activity android:name=".activity.settings.LegalActivity"
+        <activity
+            android:name=".activity.settings.LegalActivity"
             android:label="Legal"
             android:parentActivityName=".activity.DashboardActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.is4300.homez.activity.DashboardActivity" />
-
         </activity>
+        <activity
+            android:name=".activity.chore.AddChoreActivity"
+            android:label="New Chore"
+            android:parentActivityName=".activity.chore.ChoreActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.is4300.homez.activity.chore.ChoreActivity" />
+        </activity>
+        <activity android:name=".activity.calendar.AddEventActivity" />
     </application>
 
 </manifest>

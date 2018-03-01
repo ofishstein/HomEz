@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.is4300.homez.R;
+import com.is4300.homez.activity.adapters.CalendarAdapter;
 import com.is4300.homez.managers.CalendarManager;
 import com.is4300.homez.model.EventMock;
 

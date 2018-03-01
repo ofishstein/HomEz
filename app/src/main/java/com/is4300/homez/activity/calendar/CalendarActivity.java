@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import com.is4300.homez.HomEzApp;
 import com.is4300.homez.R;
+import com.is4300.homez.activity.adapters.CalendarPagerAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

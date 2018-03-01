@@ -1,9 +1,12 @@
-package com.is4300.homez.activity.calendar;
+package com.is4300.homez.activity.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.is4300.homez.activity.calendar.DayFragment;
+import com.is4300.homez.activity.calendar.MonthFragment;
+import com.is4300.homez.activity.calendar.WeekFragment;
 import com.is4300.homez.managers.CalendarManager;
 
 
