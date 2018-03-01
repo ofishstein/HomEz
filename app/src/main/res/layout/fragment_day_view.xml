@@ -10,13 +10,12 @@
         android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Today's date:"
+        android:text="Today's date: March 5, 2018"
         android:textSize="20sp"
         android:textStyle="bold"
         android:lines="2"
         android:lineSpacingExtra="@dimen/sm_margin"
         android:gravity="center"/>
-
 
     <ListView
         android:id="@+id/listView"
@@ -32,7 +31,6 @@
         android:smoothScrollbar="true"
         android:stretchMode="columnWidth"
         android:verticalSpacing="3dp">
-
     </ListView>
 
 </RelativeLayout>
