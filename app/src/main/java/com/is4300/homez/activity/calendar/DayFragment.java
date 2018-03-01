@@ -66,7 +66,8 @@ public class DayFragment extends Fragment {
         ButterKnife.bind(this, view);
 
        List<EventMock> tasks = calManager.mockEventsList;
-       CalendarAdapter calAdapter = new CalendarAdapter(getActivity().getApplicationContext(), tasks);
+       CalendarAdapter calAdapter = new CalendarAdapter(getActivity().getApplicationContext(),
+               tasks, CalViewType.DAY);
 
        event_list.setAdapter(calAdapter);
 
