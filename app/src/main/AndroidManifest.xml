@@ -70,7 +70,7 @@
         </activity>
         <activity
             android:name=".activity.settings.PersonalSettingsActivity"
-            android:label="@string/title_activity_settings"
+            android:label="Personal Settings"
             android:parentActivityName=".activity.DashboardActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -85,17 +85,30 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.is4300.homez.activity.onboarding.RegisterActivity" />
         </activity>
-        <activity android:name=".activity.status.StatusSettingsActivity"
+        <activity
+            android:name=".activity.status.StatusSettingsActivity"
+            android:label="Status Settings"
             android:parentActivityName=".activity.status.StatusActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.is4300.homez.activity.status.StatusActivity" />
         </activity>
-        <activity android:name=".activity.settings.HomeSettingsActivity"
+        <activity
+            android:name=".activity.settings.HomeSettingsActivity"
+            android:label="House Settings"
             android:parentActivityName=".activity.DashboardActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.is4300.homez.activity.DashboardActivity" /></activity>
+                android:value="com.is4300.homez.activity.DashboardActivity" />
+        </activity>
+        <activity android:name=".activity.settings.LegalActivity"
+            android:label="Legal"
+            android:parentActivityName=".activity.DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.is4300.homez.activity.DashboardActivity" />
+
+        </activity>
     </application>
 
 </manifest>

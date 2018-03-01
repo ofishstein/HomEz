@@ -53,6 +53,16 @@ public class DashChoreArrayAdapter extends ArrayAdapter<Chore> {
         return view;
     }
 
+    @Override
+    public boolean areAllItemsEnabled() {
+        return false;
+    }
+
+    @Override
+    public boolean isEnabled(int position) {
+        return false;
+    }
+
     static class ViewHolder {
         @BindView(R.id.choreName)
         TextView choreName;

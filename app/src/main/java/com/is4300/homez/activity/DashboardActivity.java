@@ -17,6 +17,9 @@ import com.is4300.homez.activity.adapters.StatusArrayAdapter;
 import com.is4300.homez.activity.billsplit.BillSplitActivity;
 import com.is4300.homez.activity.calendar.CalendarActivity;
 import com.is4300.homez.activity.chore.ChoreActivity;
+import com.is4300.homez.activity.onboarding.LoginActivity;
+import com.is4300.homez.activity.settings.HomeSettingsActivity;
+import com.is4300.homez.activity.settings.LegalActivity;
 import com.is4300.homez.activity.settings.PersonalSettingsActivity;
 import com.is4300.homez.activity.status.StatusActivity;
 import com.is4300.homez.model.Chore;
@@ -61,16 +64,32 @@ public class DashboardActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_settings, menu);
+        inflater.inflate(R.menu.menu_dashboard, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.settingsMenu) {
-                Intent intent = new Intent(this, PersonalSettingsActivity.class);
-                startActivity(intent);
+        Intent intent;
 
+        switch (item.getItemId()) {
+            case R.id.personalSettings:
+                intent = new Intent(this, PersonalSettingsActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.houseSettings:
+                intent = new Intent(this, HomeSettingsActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.legal:
+                intent = new Intent(this, LegalActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.signOut:
+                intent = new Intent(this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+                break;
         }
         return true;
     }
