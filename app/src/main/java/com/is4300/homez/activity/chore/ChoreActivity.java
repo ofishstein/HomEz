@@ -1,10 +1,14 @@
 package com.is4300.homez.activity.chore;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.is4300.homez.HomEzApp;
 import com.is4300.homez.R;
@@ -31,6 +35,20 @@ public class ChoreActivity extends AppCompatActivity {
         this.choreViewPager.setAdapter(chorePagerAdapter);
         this.choreViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(choreTabLayout));
         this.choreTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(choreViewPager));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_add, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.equals(R.menu.menu_add)) {
+            startActivity(new Intent(this, AddChoreActivity.class));
+        }
+        return true;
     }
 }
 
