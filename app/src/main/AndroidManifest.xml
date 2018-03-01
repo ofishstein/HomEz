@@ -111,13 +111,19 @@
         </activity>
         <activity
             android:name=".activity.chore.AddChoreActivity"
-            android:label="New Chore"
+            android:label="Add Chore"
             android:parentActivityName=".activity.chore.ChoreActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.is4300.homez.activity.chore.ChoreActivity" />
         </activity>
-        <activity android:name=".activity.calendar.AddEventActivity" />
+        <activity android:name=".activity.calendar.AddEventActivity"
+            android:label="Add Event"
+            android:parentActivityName=".activity.calendar.CalendarActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.is4300.homez.activity.calendar.CalendarActivity" />
+        </activity>
     </application>
 
 </manifest>
