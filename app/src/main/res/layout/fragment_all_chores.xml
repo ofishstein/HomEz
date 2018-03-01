@@ -5,34 +5,38 @@
     android:layout_margin="@dimen/lrg_margin"
     tools:context="com.is4300.homez.activity.chore.AllChoresFragment">
 
-
     <TextView
-        android:id="@+id/allChoresPrompt"
-        android:layout_marginTop="60dp"
+        android:id="@+id/allPendingChores"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/all_chores_prompt"
+        android:text="@string/all_pending_chores"
         android:textSize="20sp"
-        android:lines="2"
+        android:lines="1"
         android:textStyle="bold"
-        android:lineSpacingExtra="@dimen/sm_margin"
-        android:gravity="center"/>
+        android:gravity="left"/>
 
     <ListView
-        android:id="@+id/all_chores_list"
+        android:id="@+id/all_pending_chores_list"
+        android:layout_below="@+id/allPendingChores"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="200dp" />
 
     <TextView
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/allChoresPrompt"
-        android:id="@+id/textView"
+        android:id="@+id/allCompletedChores"
+        android:layout_below="@+id/all_pending_chores_list"
         android:layout_width="match_parent"
-        android:lines="2"
-        android:lineSpacingExtra="@dimen/sm_margin"
-        android:gravity="center"
         android:layout_height="wrap_content"
-        android:text="@string/all_chores_note" />
+        android:text="@string/all_completed_chores"
+        android:textSize="20sp"
+        android:lines="1"
+        android:textStyle="bold"
+        android:gravity="left"/>
+
+    <ListView
+        android:id="@+id/all_completed_chores_list"
+        android:layout_below="@+id/allCompletedChores"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
 </RelativeLayout>

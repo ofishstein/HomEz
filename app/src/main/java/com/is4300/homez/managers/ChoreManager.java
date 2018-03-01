@@ -40,4 +40,41 @@ public class ChoreManager {
 
         return upcomingChores;
     }
+
+    public List<Chore> getCompletedChores() {
+        List<Chore> completedChores = new ArrayList<>();
+
+        for(Chore chore: mockChoreList) {
+            if (chore.complete) {
+                completedChores.add(chore);
+            }
+        }
+
+        return completedChores;
+    }
+
+
+    public List<Chore> getMyUpcomingChores(String roommate) {
+        List<Chore> upcomingChores = new ArrayList<>();
+
+        for (Chore chore: mockChoreList) {
+            if (!chore.complete && chore.assignee.equalsIgnoreCase(roommate)){
+                upcomingChores.add(chore);
+            }
+        }
+
+        return upcomingChores;
+    }
+
+    public List<Chore> getMyCompletedChores(String roommate) {
+        List<Chore> completedChores = new ArrayList<>();
+
+        for (Chore chore: mockChoreList) {
+            if (chore.complete && chore.assignee.equalsIgnoreCase(roommate)){
+                completedChores.add(chore);
+            }
+        }
+
+        return completedChores;
+    }
 }

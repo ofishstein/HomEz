@@ -7,55 +7,59 @@
     android:layout_margin="@dimen/lrg_margin"
     android:orientation="vertical"
     android:textStyle="bold"
-    tools:context="com.is4300.homez.activity.chore.ChoreActivity">
+    tools:context="com.is4300.homez.activity.chore.AddChoreActivity">
 
 
     <TextView
-        android:id="@+id/createPrompt"
+        android:id="@+id/addChore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/med_margin"
-        android:layout_marginTop="@dimen/med_margin"
-        android:gravity="center"
-        android:text="@string/welcome"
-        android:textSize="30sp" />
+        android:text="@string/add_chore"
+        android:textSize="20sp"
+        android:lines="1"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:gravity="left"/>
 
     <EditText
-        android:id="@+id/choreName"
-        style="@style/customEditText"
+        android:id="@+id/choreTitle"
+        android:layout_below="@id/addChore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/createPrompt"
-        android:layout_marginBottom="@dimen/lrg_margin"
-        android:layout_marginEnd="@dimen/sm_margin"
-        android:layout_marginStart="@dimen/sm_margin"
+        android:gravity="left"
+        android:textSize="14sp"
         android:ems="10"
-        android:hint="Chore Title"
-        android:inputType="textPersonName" />
+        style="@style/customEditText"
+        android:hint="Chore Title" />
 
-
-    <Spinner
-        android:id="@+id/assigneeSpinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/choreName"
-        android:layout_marginTop="30dp" />
+    <!--TODO add assignee-->
 
     <DatePicker
         android:id="@+id/datePicker"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/assigneeSpinner"
-        android:layout_centerHorizontal="true" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/choreTitle"
+        android:layout_centerHorizontal="true"
+        android:datePickerMode="spinner"
+        android:layout_marginTop="11dp" />
+    <!--TODO add/fix date picker to include day of week-->
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/datePicker"
+        android:layout_centerHorizontal="true"
+        android:datePickerMode="spinner"
+        android:layout_marginTop="11dp" />
 
     <Button
-        android:id="@+id/continueButton"
-        style="@style/customButton"
+        android:id="@+id/saveButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="Continue" />
+        style="@style/customButton"
+        android:text="@string/save_chore" />
 
 </android.widget.RelativeLayout>
 

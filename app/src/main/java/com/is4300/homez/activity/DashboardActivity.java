@@ -49,6 +49,8 @@ public class DashboardActivity extends AppCompatActivity {
     @BindView(R.id.eventList)
     ListView eventListView;
 
+    String activeUserMock = new String("Ian Leonard");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +104,7 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     private void setUpChoreList() {
-        List<Chore> chores = ((HomEzApp) getApplicationContext()).choreManager.getUpcomingChores();
+        List<Chore> chores = ((HomEzApp) getApplicationContext()).choreManager.getMyUpcomingChores(activeUserMock);
         DashChoreArrayAdapter arrayAdapter = new DashChoreArrayAdapter(this, R.layout.item_dash_chore, chores);
         choreListView.setAdapter(arrayAdapter);
         UiUtils.setListViewHeightBasedOnItems(choreListView);
