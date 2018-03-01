@@ -8,10 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.is4300.homez.R;
-import com.is4300.homez.activity.adapters.ChoreAdapter;
+import com.is4300.homez.activity.adapters.MyChoreAdapter;
 import com.is4300.homez.managers.ChoreManager;
 import com.is4300.homez.model.Chore;
-import com.is4300.homez.model.RoommateModel;
 
 import java.util.List;
 
@@ -61,10 +60,10 @@ public class MyChoresFragment extends Fragment {
         ButterKnife.bind(this, view);
 
         List<Chore> pendingChores = choreManager.getMyUpcomingChores(activeUserMock);
-        ChoreAdapter pendingAdapter = new ChoreAdapter(getActivity().getApplicationContext(), pendingChores);
+        MyChoreAdapter pendingAdapter = new MyChoreAdapter(getActivity().getApplicationContext(), pendingChores);
 
         List<Chore> completedChores = choreManager.getMyCompletedChores(activeUserMock);
-        ChoreAdapter completedAdapter = new ChoreAdapter(getActivity().getApplicationContext(), completedChores);
+        MyChoreAdapter completedAdapter = new MyChoreAdapter(getActivity().getApplicationContext(), completedChores);
 
 
         myPendingChoresList.setAdapter(pendingAdapter);

@@ -85,7 +85,7 @@ public class ChoreActivity extends Activity {
         modelItems[3] = new ChoreModel("Buy Toilet Paper", 0, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard", "ian.leonard44@gmail.com"));
         modelItems[4] = new ChoreModel("Take Out Trash", 1, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard", "ian.leonard44@gmail.com"));
 
-        ChoreAdapter adapter = new ChoreAdapter(this, modelItems);
+        MyChoreAdapter adapter = new MyChoreAdapter(this, modelItems);
         lv.setAdapter(adapter);
     }
 

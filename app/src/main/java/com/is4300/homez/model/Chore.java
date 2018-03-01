@@ -50,7 +50,6 @@ public class Chore {
         choresList.add(new Chore("Buy Toilet Paper", true, new SimpleDateFormat("1/1/1"), "Connor Rouan", RecurType.WEEKLY));
         choresList.add(new Chore("Buy Guacamole", false, new SimpleDateFormat("1/1/1"), "Ian Leonard", RecurType.WEEKLY));
         choresList.add(new Chore("Feed the Fish", false, new SimpleDateFormat("1/1/1"), "Ian Leonard", RecurType.WEEKLY));
-        choresList.add(new Chore("Pay Comcast", false, new SimpleDateFormat("1/1/1"), "Ian Leonard", RecurType.WEEKLY));
         choresList.add(new Chore("Scrub the Bathtub", true, new SimpleDateFormat("1/1/1"), "Ian Leonard", RecurType.WEEKLY));
 
 

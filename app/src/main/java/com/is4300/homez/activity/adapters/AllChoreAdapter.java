@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.is4300.homez.R;
@@ -19,11 +18,11 @@ import java.util.List;
 
 
 /*
-public class ChoreAdapter extends ArrayAdapter<Chore> {
+public class MyChoreAdapter extends ArrayAdapter<Chore> {
     private LayoutInflater inflater;
     private int resource;
 
-    public ChoreAdapter(@NonNull Context context, int resource, @NonNull List<Chore> objects) {
+    public MyChoreAdapter(@NonNull Context context, int resource, @NonNull List<Chore> objects) {
         super(context, resource, objects);
         this.inflater = LayoutInflater.from(getContext());
         this.resource = resource;
@@ -62,37 +61,35 @@ public class ChoreAdapter extends ArrayAdapter<Chore> {
 
 
 
-public class ChoreAdapter extends ArrayAdapter<Chore> {
-        List<Chore> modelItems=null;
-        Context context;
+public class AllChoreAdapter extends ArrayAdapter<Chore> {
+    List<Chore> modelItems=null;
+    Context context;
 
 
 
-    public ChoreAdapter(Context context, List<Chore> resource) {
-        super(context, R.layout.my_one_chore, resource);
+    public AllChoreAdapter(Context context, List<Chore> resource) {
+        super(context, R.layout.all_one_chore, resource);
         this.context = context;
         this.modelItems = resource;
-        }
+    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
         LayoutInflater inflater = LayoutInflater.from(getContext());
 
-        convertView = inflater.inflate(R.layout.my_one_chore, parent, false);
+        convertView = inflater.inflate(R.layout.all_one_chore, parent, false);
 
-        TextView name = convertView.findViewById(R.id.textView1);
+        TextView name = convertView.findViewById(R.id.textView3);
+        TextView assignee = convertView.findViewById(R.id.assignee);
 
-        CheckBox cb = convertView.findViewById(R.id.checkBox1);
+        //CheckBox cb = convertView.findViewById(R.id.checkBox1);
 
 
         Chore item = getItem(position);
         name.setText(item.getName());
+        assignee.setText(item.getAssignee());
 
-        if(item.isComplete())
-            cb.setChecked(true);
-        else
-            cb.setChecked(false);
         return convertView;
-        }
+    }
 }
