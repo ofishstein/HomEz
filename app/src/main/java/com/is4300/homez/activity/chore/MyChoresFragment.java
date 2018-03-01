@@ -65,7 +65,7 @@ public class MyChoresFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_my_chores, container, false);
         ButterKnife.bind(this, view);
 
-        ((HomEzApp) getActivity().getApplicationContext()).
+        //((HomEzApp) getActivity().getApplicationContext()).
 
 
 

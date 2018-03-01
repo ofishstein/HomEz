@@ -8,7 +8,6 @@
     <string name="title_activity_chore">Chores</string>
     <string name="title_activity_status">Status</string>
     <string name="title_activity_bill_split">Bill Split</string>
-    <string name="title_activity_bill_split_create">Create Charge</string>
     <string name="title_activity_house">Choose House</string>
     <string name="email_address">Email Address</string>
     <string name="password">Password</string>
@@ -32,21 +31,24 @@
         "ask them for the House ID and enter it in Join House"
     </string>
 
-    <string name="Charge">Charge</string>
-    <string name="Pay">Pay</string>
-
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="done">Done</string>
     <string name="house_id">House ID</string>
     <string name="house_name">House Name</string>
     <string name="welcome">Welcome!</string>
-    <string name="your_balance">Your Balance:</string>
-    <string name="do_not_disturb">Do Not Disturb</string>
-    <string name="away">Away</string>
-    <string name="home">Home</string>
-    <string name="dash">-</string>
-    <string name="add">Add</string>
-    <string name="save_changes">Save Changes</string>
-    <string name="continue_string">Continue</string>
+    <string name="all_chores_prompt">Hello Test</string>
+    <string name="all_chores_note">Hello Test</string>
+    <string name="Pay">Pay</string>
+    <string name="Charge">Charge</string>
+    <string name="add" />
+    <string name="title_activity_bill_split_create">title_activity_bill_split_create</string>
+    <string name="dash">dash</string>
+    <string name="your_balance">your_balance</string>
+    <string name="continue_string">continue_string</string>
+    <string name="save_changes">save_changes</string>
+    <string name="home">home</string>
+    <string name="away">away</string>
+    <string name="do_not_disturb">do_not_disturb</string>
+
 </resources>
