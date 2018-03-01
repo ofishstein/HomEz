@@ -7,7 +7,7 @@ import com.is4300.homez.R;
 
 public class BillSplitActivity extends AppCompatActivity {
 
-    private BillSplitAdapter BillSplitAdapter;
+    private com.is4300.homez.activity.adapters.BillSplitAdapter BillSplitAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -24,7 +24,7 @@ public class BillSplitManager {
         return billSplitManagerInstance;
     }
 
-    public void generateMockPaymentsList() throws InstantiationException, IllegalAccessException {
+    public void generateMockPaymentList() throws InstantiationException, IllegalAccessException {
         mockPaymentList = BillSplitModel.generateMockPaymentList();
     }
 }

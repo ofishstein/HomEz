@@ -49,4 +49,7 @@
     <string name="add">Add</string>
     <string name="save_changes">Save Changes</string>
     <string name="continue_string">Continue</string>
+
+    <!-- BILL SPLIT TEXT -->
+    <string name="mockPayment1">Mock Payment</string>
 </resources>

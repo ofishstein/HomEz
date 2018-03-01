@@ -1,4 +1,4 @@
-package com.is4300.homez.activity.billsplit;
+package com.is4300.homez.activity.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
