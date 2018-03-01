@@ -65,4 +65,16 @@ public class ChoreManager {
 
         return upcomingChores;
     }
+
+    public List<Chore> getMyCompletedChores(RoommateModel roommate) {
+        List<Chore> completedChores = new ArrayList<>();
+
+        for (Chore chore: mockChoreList) {
+            if (chore.complete && chore.assignee.equalsIgnoreCase(roommate.getFull())){
+                completedChores.add(chore);
+            }
+        }
+
+        return completedChores;
+    }
 }

@@ -19,9 +19,9 @@ public class RoommateModel {
         return this.first;
     }
     public String getLast() { return this.last; }
-    public String getFull() { return this.first + this.last; }
+    public String getFull() { return this.first + " " + this.last; }
     public String getPossessive() { return this.first + "'s"; }
-    public String getFullPossessive() { return this.first + this.last + "'s"; }
+    public String getFullPossessive() { return this.first + " " + this.last + "'s"; }
     public String getEmail() { return this.email; }
 
     RoommateModel ian = new RoommateModel("Ian", "Leonard", "ian.leonard44@gmail.com");

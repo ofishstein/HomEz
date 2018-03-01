@@ -11,6 +11,7 @@ import com.is4300.homez.R;
 import com.is4300.homez.activity.adapters.ChoreAdapter;
 import com.is4300.homez.managers.ChoreManager;
 import com.is4300.homez.model.Chore;
+import com.is4300.homez.model.RoommateModel;
 
 import java.util.List;
 
@@ -19,6 +20,8 @@ import butterknife.ButterKnife;
 
 
 public class MyChoresFragment extends Fragment {
+
+    RoommateModel activeUserMock = new RoommateModel("Ian", "Leonard", "ian.leonard44@gmail.com");
 
     @BindView(R.id.my_pending_chores_list)
     ListView myPendingChoresList;
@@ -57,10 +60,10 @@ public class MyChoresFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_my_chores, container, false);
         ButterKnife.bind(this, view);
 
-        List<Chore> pendingChores = choreManager.getUpcomingChores();
+        List<Chore> pendingChores = choreManager.getMyUpcomingChores(activeUserMock);
         ChoreAdapter pendingAdapter = new ChoreAdapter(getActivity().getApplicationContext(), pendingChores);
 
-        List<Chore> completedChores = choreManager.getCompletedChores();
+        List<Chore> completedChores = choreManager.getMyCompletedChores(activeUserMock);
         ChoreAdapter completedAdapter = new ChoreAdapter(getActivity().getApplicationContext(), completedChores);
 
 
