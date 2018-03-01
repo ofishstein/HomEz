@@ -6,15 +6,31 @@
     tools:context="com.is4300.homez.activity.calendar.WeekFragment">
 
     <TextView
-        android:id="@+id/temp_week"
+        android:id="@+id/week_info"
         android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calendar week view"
+        android:text="Today's date: Monday March 5, 2018"
         android:textSize="20sp"
         android:textStyle="bold"
         android:lines="2"
         android:lineSpacingExtra="@dimen/sm_margin"
         android:gravity="center"/>
 
+    <GridView
+        android:id="@+id/week_days"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="127dp"
+        android:background="#DADADA"
+        android:gravity="center"
+        android:horizontalSpacing="1dp"
+        android:numColumns="7"
+        android:verticalSpacing="1dp" />
+
 </RelativeLayout>
+
+
