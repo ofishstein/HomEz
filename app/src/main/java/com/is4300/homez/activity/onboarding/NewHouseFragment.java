@@ -1,6 +1,5 @@
 package com.is4300.homez.activity.onboarding;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

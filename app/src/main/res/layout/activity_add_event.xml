@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/lrg_margin"
+    android:orientation="vertical"
+    android:textStyle="bold"
+    tools:context="com.is4300.homez.activity.calendar.AddEventActivity">
+
+
+    <TextView
+        android:id="@+id/createEventPrompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/med_margin"
+        android:layout_marginTop="@dimen/med_margin"
+        android:gravity="center"
+        android:text="Add New Event"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/eventName"
+        style="@style/customEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/createEventPrompt"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="Event Name"
+        android:inputType="textPersonName" />
+
+
+    <Spinner
+        android:id="@+id/assigneeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/continueButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="54dp" />
+
+    <Button
+        android:id="@+id/continueButton"
+        style="@style/customButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Continue" />
+
+</android.widget.RelativeLayout>

@@ -50,8 +50,9 @@ public class StatusActivity extends AppCompatActivity {
         if(item.getItemId() == R.id.settingsMenu) {
             Intent intent = new Intent(this, StatusSettingsActivity.class);
             startActivity(intent);
-
+            return true;
         }
-        return true;
+
+        return super.onOptionsItemSelected(item);
     }
 }
