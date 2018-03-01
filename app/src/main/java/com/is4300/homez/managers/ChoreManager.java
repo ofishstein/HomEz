@@ -40,4 +40,16 @@ public class ChoreManager {
 
         return upcomingChores;
     }
+
+    public List<Chore> getCompletedChores() {
+        List<Chore> completedChores = new ArrayList<>();
+
+        for(Chore chore: mockChoreList) {
+            if (chore.complete) {
+                completedChores.add(chore);
+            }
+        }
+
+        return completedChores;
+    }
 }

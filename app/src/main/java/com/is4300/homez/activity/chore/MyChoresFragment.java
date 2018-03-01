@@ -7,12 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.is4300.homez.HomEzApp;
 import com.is4300.homez.R;
-import com.is4300.homez.model.ChoreModel;
-import com.is4300.homez.model.RoommateModel;
+import com.is4300.homez.activity.adapters.ChoreAdapter;
+import com.is4300.homez.managers.ChoreManager;
+import com.is4300.homez.model.Chore;
 
-import java.text.SimpleDateFormat;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,13 +20,17 @@ import butterknife.ButterKnife;
 
 public class MyChoresFragment extends Fragment {
 
-    @BindView(R.id.my_chores_list)
-    ListView my_chores_list;
+    @BindView(R.id.my_pending_chores_list)
+    ListView myPendingChoresList;
 
-    ChoreModel[] modelItems;
+    @BindView(R.id.my_completed_chores_list)
+    ListView myCompletedChoresList;
 
-    public MyChoresFragment() {
+    ChoreManager choreManager;
+
+    public MyChoresFragment(ChoreManager choreManager) {
         // Required empty public constructor
+        this.choreManager = choreManager;
     }
 
     /**
@@ -35,8 +39,8 @@ public class MyChoresFragment extends Fragment {
      *
      * @return A new instance of fragment JoinHouseFragment.
      */
-    public static MyChoresFragment newInstance() {
-        MyChoresFragment fragment = new MyChoresFragment();
+    public static MyChoresFragment newInstance(ChoreManager choreManager) {
+        MyChoresFragment fragment = new MyChoresFragment(choreManager);
         return fragment;
     }
 
@@ -44,18 +48,6 @@ public class MyChoresFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //setContentView(R.layout.activity_chore);
-        //lv = findViewById(R.id.all_list);
-
-        modelItems = new ChoreModel[5];
-        modelItems[0] = new ChoreModel("Clean Room", 0, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard", "ian.leonard44@gmail.com"));
-        modelItems[1] = new ChoreModel("Empty Dishwasher", 1, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard", "ian.leonard44@gmail.com"));
-        modelItems[2] = new ChoreModel("Swab the Poopdeck", 1, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard", "ian.leonard44@gmail.com"));
-        modelItems[3] = new ChoreModel("Buy Toilet Paper", 0, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard", "ian.leonard44@gmail.com"));
-        modelItems[4] = new ChoreModel("Take Out Trash", 1, new SimpleDateFormat("1/1/1"), new RoommateModel("Ian", "Leonard", "ian.leonard44@gmail.com"));
-
-        //ChoreAdapter adapter = new ChoreAdapter(this, modelItems);
-        //lv.setAdapter(adapter);
     }
 
     @Override
@@ -65,9 +57,15 @@ public class MyChoresFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_my_chores, container, false);
         ButterKnife.bind(this, view);
 
-        ((HomEzApp) getActivity().getApplicationContext()).
+        List<Chore> pendingChores = choreManager.getUpcomingChores();
+        ChoreAdapter pendingAdapter = new ChoreAdapter(getActivity().getApplicationContext(), pendingChores);
+
+        List<Chore> completedChores = choreManager.getCompletedChores();
+        ChoreAdapter completedAdapter = new ChoreAdapter(getActivity().getApplicationContext(), completedChores);
 
 
+        myPendingChoresList.setAdapter(pendingAdapter);
+        myCompletedChoresList.setAdapter(completedAdapter);
 
         return view;
     }

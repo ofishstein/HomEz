@@ -45,13 +45,14 @@ public class Chore {
         List<Chore> choresList = new ArrayList<>();
 
         choresList.add(new Chore("Clean Room", false, new SimpleDateFormat("1/1/1"), "Ian Leonard", RecurType.WEEKLY));
-        choresList.add(new Chore("Empty Dishwasher", true, new SimpleDateFormat("1/1/1"), "Ian Leonard", RecurType.WEEKLY));
-        choresList.add(new Chore("Swab the Poopdeck", true, new SimpleDateFormat("1/1/1"),"Ian Leonard", RecurType.WEEKLY));
-        choresList.add(new Chore("Buy Toilet Paper", false, new SimpleDateFormat("1/1/1"), "Ian Leonard", RecurType.WEEKLY));
-        choresList.add(new Chore("Take Out Trash", true, new SimpleDateFormat("1/1/1"), "Ian Leonard", RecurType.WEEKLY));
+        choresList.add(new Chore("Empty Dishwasher", false, new SimpleDateFormat("1/1/1"), "Oli Fishstein", RecurType.WEEKLY));
+        choresList.add(new Chore("Swab the Poopdeck", true, new SimpleDateFormat("1/1/1"),"Izzi Tripp", RecurType.WEEKLY));
+        choresList.add(new Chore("Buy Toilet Paper", false, new SimpleDateFormat("1/1/1"), "Connor Rouan", RecurType.WEEKLY));
+        choresList.add(new Chore("Take Out Trash", true, new SimpleDateFormat("1/1/1"), "Atamai Tuiolosega", RecurType.WEEKLY));
 
         return choresList;
     }
+
 
 
 }

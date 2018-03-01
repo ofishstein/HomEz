@@ -1,12 +1,14 @@
 package com.is4300.homez.activity.chore;
 
 
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
+import com.is4300.homez.HomEzApp;
 import com.is4300.homez.R;
+import com.is4300.homez.activity.adapters.ChorePagerAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,7 +27,7 @@ public class ChoreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chore);
         ButterKnife.bind(this);
 
-        this.chorePagerAdapter = new ChorePagerAdapter(getSupportFragmentManager());
+        this.chorePagerAdapter = new ChorePagerAdapter(getSupportFragmentManager(), ((HomEzApp) getApplicationContext()).choreManager);
         this.choreViewPager.setAdapter(chorePagerAdapter);
         this.choreViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(choreTabLayout));
         this.choreTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(choreViewPager));

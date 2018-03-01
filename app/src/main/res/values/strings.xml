@@ -37,8 +37,10 @@
     <string name="house_id">House ID</string>
     <string name="house_name">House Name</string>
     <string name="welcome">Welcome!</string>
-    <string name="all_chores_prompt">Hello Test</string>
-    <string name="all_chores_note">Hello Test</string>
+    <string name="my_pending_chores">My Pending Chores</string>
+    <string name="my_completed_chores">My Completed Chores</string>
+    <string name="all_pending_chores">All Pending Chores</string>
+    <string name="all_completed_chores">All Completed Chores</string>
 
     <string name="your_balance">Your Balance:</string>
     <string name="do_not_disturb">Do Not Disturb</string>
