@@ -8,7 +8,8 @@
     <string name="title_activity_chore">Chores</string>
     <string name="title_activity_status">Status</string>
     <string name="title_activity_bill_split">Bill Split</string>
-    <string name="title_activity_bill_split_create">Create Charge</string>
+    <string name="title_activity_bill_split_create">Bill Split Create</string>
+>>>>>>> cd97c449b00593313cd090767c48e490cc6d2cf4
     <string name="title_activity_house">Choose House</string>
     <string name="email_address">Email Address</string>
     <string name="password">Password</string>
