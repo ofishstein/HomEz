@@ -10,7 +10,7 @@
         android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Today's date: Monday March 5, 2018"
+        android:text="Today: Monday March 5, 2018"
         android:textSize="20sp"
         android:textStyle="bold"
         android:lines="2"

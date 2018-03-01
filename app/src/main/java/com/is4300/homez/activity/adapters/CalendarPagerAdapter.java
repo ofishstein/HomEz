@@ -28,7 +28,7 @@ public class CalendarPagerAdapter extends FragmentPagerAdapter {
         if (position == 0) {
             return DayFragment.newInstance(calManager);
         } else if (position == 1) {
-            return WeekFragment.newInstance();
+            return WeekFragment.newInstance(calManager);
         } else {
             return MonthFragment.newInstance();
         }

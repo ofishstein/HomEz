@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.is4300.homez.R;
+import com.is4300.homez.activity.calendar.CalViewType;
 import com.is4300.homez.model.EventMock;
 
 import java.util.List;
@@ -19,22 +20,31 @@ import java.util.List;
 
 public class CalendarAdapter extends ArrayAdapter<EventMock> {
 
-    List<EventMock> events = null;
-    Context context;
+    private List<EventMock> events = null;
+    private Context context;
+    private CalViewType viewType;
 
-    public CalendarAdapter(@NonNull Context context, List<EventMock> resource) {
+    public CalendarAdapter(@NonNull Context context, List<EventMock> resource, CalViewType v) {
         super(context, R.layout.item_dash_calendar_event, resource);
         this.context = context;
         this.events = resource;
+        this.viewType = v;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(getContext());
-        convertView = inflater.inflate(R.layout.item_dash_calendar_event, parent, false);
-
-        TextView time = convertView.findViewById(R.id.eventTime);
-        TextView name = convertView.findViewById(R.id.eventName);
+        TextView time;
+        TextView name;
+        if (viewType.equals(CalViewType.WEEK)) {
+            convertView = inflater.inflate(R.layout.item_calendar_event_stacked, parent, false);
+            time = convertView.findViewById(R.id.eventTimeS);
+            name = convertView.findViewById(R.id.eventNameS);
+        } else {
+            convertView = inflater.inflate(R.layout.item_dash_calendar_event, parent, false);
+            time = convertView.findViewById(R.id.eventTime);
+            name = convertView.findViewById(R.id.eventName);
+        }
 
         EventMock item = getItem(position);
         time.setText(item.time);

@@ -31,10 +31,13 @@ public class CalendarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_calendar);
         ButterKnife.bind(this);
 
-        this.calPagerAdapter = new CalendarPagerAdapter(getSupportFragmentManager(), ((HomEzApp) getApplicationContext()).calendarManager);
+        this.calPagerAdapter = new CalendarPagerAdapter(getSupportFragmentManager(),
+                ((HomEzApp) getApplicationContext()).calendarManager);
         this.calViewPager.setAdapter(calPagerAdapter);
-        this.calViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(calTabLayout));
-        this.calTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(calViewPager));
+        this.calViewPager.addOnPageChangeListener(
+                new TabLayout.TabLayoutOnPageChangeListener(calTabLayout));
+        this.calTabLayout.addOnTabSelectedListener(
+                new TabLayout.ViewPagerOnTabSelectedListener(calViewPager));
     }
 
     @Override
