@@ -3,11 +3,11 @@
     package="com.is4300.homez">
 
     <application
+        android:name=".HomEzApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:name=".HomEzApp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -69,20 +69,45 @@
                 android:value="com.is4300.homez.activity.DashboardActivity" />
         </activity>
         <activity
-            android:name=".activity.settings.SettingsActivity"
-            android:label="@string/title_activity_settings"
+            android:name=".activity.settings.PersonalSettingsActivity"
+            android:label="Personal Settings"
             android:parentActivityName=".activity.DashboardActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.is4300.homez.activity.DashboardActivity" />
         </activity>
-        <activity android:name=".activity.onboarding.HouseActivity"
+        <activity
+            android:name=".activity.onboarding.HouseActivity"
             android:label="@string/title_activity_house"
-            android:parentActivityName=".activity.onboarding.RegisterActivity"
-            android:noHistory="true">
+            android:noHistory="true"
+            android:parentActivityName=".activity.onboarding.RegisterActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.is4300.homez.activity.onboarding.RegisterActivity" />
+        </activity>
+        <activity
+            android:name=".activity.status.StatusSettingsActivity"
+            android:label="Status Settings"
+            android:parentActivityName=".activity.status.StatusActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.is4300.homez.activity.status.StatusActivity" />
+        </activity>
+        <activity
+            android:name=".activity.settings.HomeSettingsActivity"
+            android:label="House Settings"
+            android:parentActivityName=".activity.DashboardActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.is4300.homez.activity.DashboardActivity" />
+        </activity>
+        <activity android:name=".activity.settings.LegalActivity"
+            android:label="Legal"
+            android:parentActivityName=".activity.DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.is4300.homez.activity.DashboardActivity" />
+
         </activity>
     </application>
 

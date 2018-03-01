@@ -92,6 +92,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         style="@style/customButton"
-        android:text="Continue" />
+        android:text="@string/continue_string" />
 </android.widget.RelativeLayout>
 

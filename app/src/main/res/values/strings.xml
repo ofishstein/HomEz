@@ -48,4 +48,6 @@
     <string name="home">Home</string>
     <string name="dash">-</string>
     <string name="add">Add</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="continue_string">Continue</string>
 </resources>
