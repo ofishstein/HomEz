@@ -1,7 +1,6 @@
 package com.is4300.homez.managers;
 
 import com.is4300.homez.model.Chore;
-import com.is4300.homez.model.Roommate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,11 +53,12 @@ public class ChoreManager {
         return completedChores;
     }
 
-    public List<Chore> getMyUpcomingChores(Roommate roommate) {
+
+    public List<Chore> getMyUpcomingChores(String roommate) {
         List<Chore> upcomingChores = new ArrayList<>();
 
         for (Chore chore: mockChoreList) {
-            if (!chore.complete && chore.assignee.equalsIgnoreCase(roommate.getFull())){
+            if (!chore.complete && chore.assignee.equalsIgnoreCase(roommate)){
                 upcomingChores.add(chore);
             }
         }
@@ -66,11 +66,11 @@ public class ChoreManager {
         return upcomingChores;
     }
 
-    public List<Chore> getMyCompletedChores(Roommate roommate) {
+    public List<Chore> getMyCompletedChores(String roommate) {
         List<Chore> completedChores = new ArrayList<>();
 
         for (Chore chore: mockChoreList) {
-            if (chore.complete && chore.assignee.equalsIgnoreCase(roommate.getFull())){
+            if (chore.complete && chore.assignee.equalsIgnoreCase(roommate)){
                 completedChores.add(chore);
             }
         }
