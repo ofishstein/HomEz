@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/lrg_margin"
+    tools:context="com.is4300.homez.activity.status.StatusSettingsActivity">
+
+    <TextView
+        android:id="@+id/shareLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/lrg_margin"
+        android:layout_marginBottom="16dp"
+        android:textSize="18sp"
+        android:text="Share Location" />
+
+    <TextView
+        android:id="@+id/shareLocationHelp"
+        android:layout_below="@+id/shareLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Allows your roommates to know if you're home or away." />
+
+    <TextView
+        android:id="@+id/doNotDisturb"
+        android:layout_below="@+id/shareLocationHelp"
+        android:layout_marginEnd="@dimen/lrg_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:textSize="18sp"
+        android:text="Do Not Disturb" />
+
+    <TextView
+        android:id="@+id/awayMessage"
+        android:layout_below="@+id/doNotDisturb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="18sp"
+        android:text="Away Message" />
+
+    <TextView
+        android:id="@+id/awayMessageHelp"
+        android:layout_below="@+id/awayMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Message to display when you are not home." />
+
+    <EditText
+        android:id="@+id/awayMessageText"
+        android:layout_toEndOf="@id/awayMessage"
+        android:layout_alignBaseline="@id/awayMessage"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:ems="10"
+        style="@style/customEditText"
+        android:inputType="textPersonName"
+        android:hint="Away" />
+
+    <Switch
+        android:id="@+id/shareLocationSwitch"
+        android:layout_alignBaseline="@+id/shareLocation"
+        android:checked="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Switch
+        android:id="@+id/doNotDisturbSwitch"
+        android:layout_alignBaseline="@id/doNotDisturb"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        style="@style/customButton"
+        android:text="@string/save_changes" />
+
+</RelativeLayout>
