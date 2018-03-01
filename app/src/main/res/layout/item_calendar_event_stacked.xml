@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:focusable="false"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="@dimen/med_margin"
+    android:paddingTop="@dimen/med_margin">
+
+    <TextView
+        android:id="@+id/eventTimeS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/med_margin"
+        tools:text="00:00 pm" />
+
+    <TextView
+        android:id="@+id/eventNameS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/eventTimeS"
+        tools:text="Event Name" />
+
+</RelativeLayout>
