@@ -11,7 +11,7 @@ import com.is4300.homez.R;
 import com.is4300.homez.activity.adapters.ChoreAdapter;
 import com.is4300.homez.managers.ChoreManager;
 import com.is4300.homez.model.Chore;
-import com.is4300.homez.model.RoommateModel;
+import com.is4300.homez.model.Roommate;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ import butterknife.ButterKnife;
 
 public class MyChoresFragment extends Fragment {
 
-    RoommateModel activeUserMock = new RoommateModel("Ian", "Leonard", "ian.leonard44@gmail.com");
+    Roommate activeUserMock = new Roommate("Ian", "Leonard", "ian.leonard44@gmail.com");
 
     @BindView(R.id.my_pending_chores_list)
     ListView myPendingChoresList;

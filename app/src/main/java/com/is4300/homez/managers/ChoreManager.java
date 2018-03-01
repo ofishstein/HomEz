@@ -1,7 +1,7 @@
 package com.is4300.homez.managers;
 
 import com.is4300.homez.model.Chore;
-import com.is4300.homez.model.RoommateModel;
+import com.is4300.homez.model.Roommate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +54,7 @@ public class ChoreManager {
         return completedChores;
     }
 
-    public List<Chore> getMyUpcomingChores(RoommateModel roommate) {
+    public List<Chore> getMyUpcomingChores(Roommate roommate) {
         List<Chore> upcomingChores = new ArrayList<>();
 
         for (Chore chore: mockChoreList) {
@@ -66,7 +66,7 @@ public class ChoreManager {
         return upcomingChores;
     }
 
-    public List<Chore> getMyCompletedChores(RoommateModel roommate) {
+    public List<Chore> getMyCompletedChores(Roommate roommate) {
         List<Chore> completedChores = new ArrayList<>();
 
         for (Chore chore: mockChoreList) {
