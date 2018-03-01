@@ -17,51 +17,6 @@ import java.util.List;
  * Created by ianleonard on 2/27/18.
  */
 
-
-/*
-public class MyChoreAdapter extends ArrayAdapter<Chore> {
-    private LayoutInflater inflater;
-    private int resource;
-
-    public MyChoreAdapter(@NonNull Context context, int resource, @NonNull List<Chore> objects) {
-        super(context, resource, objects);
-        this.inflater = LayoutInflater.from(getContext());
-        this.resource = resource;
-    }
-
-    @Override
-    public View getView(int position, View view, ViewGroup parent) {
-        Chore chore = getItem(position);
-        ViewHolder holder;
-
-        if (view != null) {
-            holder = (ViewHolder) view.getTag();
-        } else {
-            view = inflater.inflate(resource, parent, false);
-            holder = new ViewHolder(view);
-            view.setTag(holder);
-        }
-
-        if (chore != null) {
-            holder.choreName.setText(chore.name);
-        }
-
-        return view;
-    }
-
-    static class ViewHolder {
-        @BindView(R.id.choreName)
-        TextView choreName;
-
-        public ViewHolder(View view) {
-            ButterKnife.bind(this, view);
-        }
-    }
-}
-*/
-
-
-
 public class MyChoreAdapter extends ArrayAdapter<Chore> {
         List<Chore> modelItems=null;
         Context context;
