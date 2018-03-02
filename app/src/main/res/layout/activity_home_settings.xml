@@ -1,9 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/lrg_margin"
     tools:context="com.is4300.homez.activity.settings.HomeSettingsActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/homeIDText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/lrg_margin"
+        android:layout_marginBottom="16dp"
+        android:textSize="20sp"
+        android:text="House ID" />
+
+    <TextView
+        android:id="@+id/homeIDHelp"
+        android:layout_below="@+id/homeIDText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="Provide this ID code to a new roommate to add them to your HomEz House. They'll enter it during registration." />
+
+    <TextView
+        android:id="@+id/homeID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="729502"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/homeMessage"
+        android:layout_below="@+id/homeIDHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="20sp"
+        android:text="Home Name" />
+
+    <EditText
+        android:id="@+id/HomeName"
+        android:layout_toEndOf="@id/homeMessage"
+        android:layout_alignBaseline="@id/homeMessage"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:ems="10"
+        android:layout_marginBottom="30dp"
+        style="@style/customEditText"
+        android:inputType="textPersonName"
+        android:text="HomEz Pad" />
+
+    <TextView
+        android:id="@+id/RoommateText"
+        android:layout_below="@+id/HomeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/lrg_margin"
+        android:textSize="20sp"
+        android:text="Roommates" />
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/roommateListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/RoommateText" />
+
+    <Button
+        android:id="@+id/hSettings_saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        style="@style/customButton"
+        android:text="Save Changes" />
+
+</RelativeLayout>

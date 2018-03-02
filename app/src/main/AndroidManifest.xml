@@ -139,6 +139,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.is4300.homez.activity.chore.ChoreActivity" />
         </activity>
+        <activity android:name=".activity.settings.ChangePasswordActivity"
+            android:label="Change Password"
+            android:parentActivityName=".activity.settings.PersonalSettingsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.is4300.homez.activity.settings.PersonalSettingsActivity" />
+        </activity>
     </application>
 
 </manifest>
