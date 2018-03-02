@@ -32,26 +32,25 @@
         style="@style/customEditText"
         android:hint="Chore Title" />
 
+    <Spinner
+        android:id="@+id/assigneeSpinner"
+        android:layout_below="@id/choreTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
     <!--TODO add assignee-->
 
     <DatePicker
         android:id="@+id/datePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/choreTitle"
+        android:layout_below="@+id/assigneeSpinner"
         android:layout_centerHorizontal="true"
         android:datePickerMode="spinner"
+        android:calendarViewShown="false"
         android:layout_marginTop="11dp" />
     <!--TODO add/fix date picker to include day of week-->
 
-    <TimePicker
-        android:id="@+id/timePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/datePicker"
-        android:layout_centerHorizontal="true"
-        android:datePickerMode="spinner"
-        android:layout_marginTop="11dp" />
 
     <Button
         android:id="@+id/saveButton"

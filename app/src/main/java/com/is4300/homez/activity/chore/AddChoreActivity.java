@@ -2,9 +2,12 @@ package com.is4300.homez.activity.chore;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 
 import com.is4300.homez.R;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -13,19 +16,19 @@ import butterknife.ButterKnife;
 
 public class AddChoreActivity extends AppCompatActivity {
 
-    //@BindView(R.id.addButton)
-    //Button addButton;
+    @BindView(R.id.saveButton)
+    Button saveButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_chore);
         ButterKnife.bind(this);
-        //setOnClickListener();
+        setOnClickListener();
     }
-/*
+
     private void setOnClickListener(){
-        addButton.setOnClickListener(new View.OnClickListener() {
+        saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
@@ -33,5 +36,5 @@ public class AddChoreActivity extends AppCompatActivity {
         });
     }
 
-    */
+
 }
