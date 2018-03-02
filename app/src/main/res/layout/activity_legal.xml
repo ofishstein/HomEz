@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/lrg_margin"
     tools:context="com.is4300.homez.activity.settings.LegalActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/LegalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/lrg_margin"
+        android:layout_marginBottom="16dp"
+        android:textSize="15sp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet condimentum nunc. Pellentesque sollicitudin diam mollis nibh aliquam, fermentum blandit nulla mattis. Etiam eu hendrerit dui. Phasellus iaculis ac justo et tempus. Nunc congue vulputate ipsum. Donec varius, ipsum non ultricies commodo, eros neque pulvinar sapien, ut placerat magna arcu non libero. Etiam nec mollis nibh. Proin odio odio, euismod eu maximus a, aliquam et ante. Morbi eleifend nibh id nulla eleifend fermentum. Donec fermentum sem a tortor tempus, ac mattis augue suscipit.
+                    \n\nNulla velit nibh, luctus a mi eget, pellentesque molestie mi. Etiam ac scelerisque turpis. Quisque in elit gravida, volutpat leo dignissim, tempor augue. Donec odio justo, consequat sed lorem nec, pellentesque ultrices augue. Quisque a nunc in purus sollicitudin sodales. Praesent faucibus turpis a elementum semper. Suspendisse luctus libero non sapien consequat, at posuere est sagittis.
+                    \n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet condimentum nunc. Pellentesque sollicitudin diam mollis nibh aliquam, fermentum blandit nulla mattis. Etiam eu hendrerit dui. Phasellus iaculis ac justo et tempus. Nunc congue vulputate ipsum. Donec varius, ipsum non ultricies commodo, eros neque pulvinar sapien, ut placerat magna arcu non libero. Etiam nec mollis nibh. Proin odio odio, euismod eu maximus a, aliquam et ante. Morbi eleifend nibh id nulla eleifend fermentum. Donec fermentum sem a tortor tempus, ac mattis augue suscipit.
+                    \n\nNulla velit nibh, luctus a mi eget, pellentesque molestie mi. Etiam ac scelerisque turpis. Quisque in elit gravida, volutpat leo dignissim, tempor augue. Donec odio justo, consequat sed lorem nec, pellentesque ultrices augue. Quisque a nunc in purus sollicitudin sodales. Praesent faucibus turpis a elementum semper. Suspendisse luctus libero non sapien consequat, at posuere est sagittis." />
+
+</ScrollView>
