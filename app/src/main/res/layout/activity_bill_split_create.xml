@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/lrg_margin"
+    android:orientation="vertical"
+    android:textStyle="bold"
+    android:fitsSystemWindows="false"
+    tools:context="com.is4300.homez.activity.billsplit.BillSplitActivity">
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/billSplitTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="@dimen/lrg_margin"
+        android:background="@drawable/background_tab_bar"
+        app:tabTextColor="@color/white"
+        app:tabSelectedTextColor="@color/white"
+        app:tabIndicatorHeight="5dp"
+        android:layout_centerHorizontal="true">
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Charge" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pay" />
+
+    </android.support.design.widget.TabLayout>
+
+
+    <TextView
+        android:id="@+id/editText11"
+        android:layout_width="49dp"
+        android:layout_height="55dp"
+        android:layout_alignStart="@+id/scrollView4"
+        android:layout_alignTop="@+id/chargeAmount"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="$"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/chargeAmount"
+        style="@style/customEditText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/billSplitCompleteButton"
+        android:layout_below="@+id/billSplitTabLayout"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="41dp"
+        android:ems="10"
+        android:hint="0.00"
+        android:textAlignment="textEnd" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="200dp"
+
+        android:layout_height="120dp"
+
+        android:layout_below="@+id/editText11"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp">
+
+        <LinearLayout
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="To:" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Atamai Tuiolosega" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Izzi Tripp" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Oli Fishstein" />
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Connor Roaun" />
+
+            <CheckBox
+                android:id="@+id/checkBox5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ian Leonard" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <EditText
+        android:id="@+id/paymentMemo"
+        style="@style/customEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scrollView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="What's this for?"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:textColor="@color/lightGrey2" />
+
+    <Button
+        android:id="@+id/billSplitCompleteButton"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/paymentMemo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="Complete" />
+
+
+
+</RelativeLayout>
