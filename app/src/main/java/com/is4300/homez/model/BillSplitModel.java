@@ -1,5 +1,7 @@
 package com.is4300.homez.model;
 
+import com.is4300.homez.HomEzApp;
+
 import java.util.ArrayList;
 import java.util.List;
 

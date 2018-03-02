@@ -70,6 +70,14 @@
                 android:value="com.is4300.homez.activity.DashboardActivity" />
         </activity>
         <activity
+            android:name=".activity.billsplit.BillSplitCreateActivity"
+            android:label="@string/title_activity_bill_split_create"
+            android:parentActivityName=".activity.DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.is4300.homez.activity.DashboardActivity" />
+        </activity>
+        <activity
             android:name=".activity.settings.PersonalSettingsActivity"
             android:label="Personal Settings"
             android:parentActivityName=".activity.DashboardActivity">
