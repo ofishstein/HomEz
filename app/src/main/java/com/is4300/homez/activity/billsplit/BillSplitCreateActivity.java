@@ -1,11 +1,13 @@
 package com.is4300.homez.activity.billsplit;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.is4300.homez.R;
 import com.is4300.homez.activity.DashboardActivity;
@@ -63,6 +65,12 @@ public class BillSplitCreateActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), BillSplitActivity.class);
                 startActivity(intent);
                 finish();
+
+                Context context = getApplicationContext();
+                CharSequence text = "You're charge has been sent!";
+                int duration = Toast.LENGTH_LONG;
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
             }
         });
 

@@ -72,7 +72,8 @@
         <activity
             android:name=".activity.billsplit.BillSplitCreateActivity"
             android:label="@string/title_activity_bill_split_create"
-            android:parentActivityName=".activity.DashboardActivity">
+            android:parentActivityName=".activity.DashboardActivity"
+            android:windowSoftInputMode="adjustPan">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.is4300.homez.activity.DashboardActivity" />

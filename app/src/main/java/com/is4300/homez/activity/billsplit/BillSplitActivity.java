@@ -2,16 +2,21 @@ package com.is4300.homez.activity.billsplit;
 
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.is4300.homez.R;
 import com.is4300.homez.activity.DashboardActivity;
@@ -113,7 +118,18 @@ public class BillSplitActivity extends AppCompatActivity {
         });
 
 
-        this.remindButton.setOnClickListener(null);
+        this.remindButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = getApplicationContext();
+                CharSequence text = "You've sent Ian a reminder!";
+                int duration = Toast.LENGTH_LONG;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+
+            }
+        });
 
 
 
