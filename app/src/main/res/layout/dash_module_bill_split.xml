@@ -43,6 +43,7 @@
             android:layout_marginEnd="@dimen/lrg_margin"
             android:layout_marginBottom="@dimen/lrg_margin"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:text="@string/your_balance" />
 
         <TextView

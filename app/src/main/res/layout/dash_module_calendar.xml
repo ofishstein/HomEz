@@ -29,14 +29,26 @@
                 android:focusable="false"
                 android:layout_marginTop="@dimen/lrg_margin"
                 android:layout_marginStart="@dimen/lrg_margin"
-                android:layout_marginBottom="@dimen/med_margin"
+                android:layout_marginBottom="@dimen/sm_margin"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:text="@string/title_activity_calendar" />
 
+            <TextView
+                android:id="@+id/eventLabel"
+                android:layout_below="@+id/calendarHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_marginStart="@dimen/lrg_margin"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:text="Today's Events" />
+
             <ListView
                 android:id="@+id/eventList"
-                android:layout_below="@+id/calendarHeading"
+                android:layout_below="@+id/eventLabel"
                 android:layout_marginStart="@dimen/lrg_margin"
                 android:layout_marginEnd="@dimen/lrg_margin"
                 android:layout_marginBottom="@dimen/lrg_margin"
