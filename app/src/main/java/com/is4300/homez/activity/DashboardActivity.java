@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.is4300.homez.HomEzApp;
@@ -101,6 +102,13 @@ public class DashboardActivity extends AppCompatActivity {
         StatusArrayAdapter arrayAdapter = new StatusArrayAdapter(this, R.layout.item_user_status, statuses);
         statusListView.setAdapter(arrayAdapter);
         UiUtils.setListViewHeightBasedOnItems(statusListView);
+        statusListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getApplicationContext(), StatusActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setUpChoreList() {
@@ -108,6 +116,13 @@ public class DashboardActivity extends AppCompatActivity {
         DashChoreArrayAdapter arrayAdapter = new DashChoreArrayAdapter(this, R.layout.item_dash_chore, chores);
         choreListView.setAdapter(arrayAdapter);
         UiUtils.setListViewHeightBasedOnItems(choreListView);
+        choreListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getApplicationContext(), ChoreActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setUpEventList() {
@@ -115,6 +130,13 @@ public class DashboardActivity extends AppCompatActivity {
         DashEventArrayAdapter arrayAdapter = new DashEventArrayAdapter(this, R.layout.item_dash_calendar_event, events);
         eventListView.setAdapter(arrayAdapter);
         UiUtils.setListViewHeightBasedOnItems(eventListView);
+        eventListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getApplicationContext(), CalendarActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setUpAccountBalance() {}

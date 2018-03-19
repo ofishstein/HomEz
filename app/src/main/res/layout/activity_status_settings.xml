@@ -30,13 +30,21 @@
         android:layout_marginEnd="@dimen/lrg_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="16dp"
         android:textSize="18sp"
         android:text="Do Not Disturb" />
 
     <TextView
-        android:id="@+id/awayMessage"
+        android:id="@+id/dndMessageHelp"
         android:layout_below="@+id/doNotDisturb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Allows you to indicate that you don't want to be contacted." />
+
+    <TextView
+        android:id="@+id/awayMessage"
+        android:layout_below="@+id/dndMessageHelp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
@@ -50,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
-        android:text="Message to display when you are not home." />
+        android:text="This message can be set to display whenever you're not home. It's 'Away' by default." />
 
     <EditText
         android:id="@+id/awayMessageText"
