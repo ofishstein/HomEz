@@ -11,6 +11,8 @@
         android:layout_margin="@dimen/lrg_margin"
         android:layout_width="match_parent"
         android:clickable="false"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:listSelector="@android:color/transparent"/>
 
 </RelativeLayout>

@@ -1,32 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/statusModule"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clickable="true"
-    android:focusable="true"
-    android:background="@drawable/background_edit_text">
+    android:focusable="true">
 
-    <TextView
-        android:id="@+id/statusHeading"
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/lrg_margin"
-        android:layout_marginStart="@dimen/lrg_margin"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:text="@string/title_activity_status" />
+        card_view:cardCornerRadius="4dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardElevation="4dp">
 
-    <ListView
-        android:id="@+id/statusList"
-        android:layout_below="@+id/statusHeading"
-        android:layout_marginStart="@dimen/lrg_margin"
-        android:layout_marginEnd="@dimen/lrg_margin"
-        android:layout_marginBottom="@dimen/lrg_margin"
-        android:layout_width="match_parent"
-        android:isScrollContainer="false"
-        android:clickable="false"
-        android:layout_height="match_parent" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-</RelativeLayout>
+            <TextView
+                android:id="@+id/statusHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_marginTop="@dimen/lrg_margin"
+                android:layout_marginStart="@dimen/lrg_margin"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/title_activity_status" />
+
+            <ListView
+                android:id="@+id/statusList"
+                android:layout_below="@+id/statusHeading"
+                android:layout_marginStart="@dimen/lrg_margin"
+                android:layout_marginEnd="@dimen/lrg_margin"
+                android:layout_marginBottom="@dimen/lrg_margin"
+                android:layout_width="match_parent"
+                android:isScrollContainer="false"
+                android:layout_height="match_parent"
+                android:listSelector="@android:color/transparent"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
