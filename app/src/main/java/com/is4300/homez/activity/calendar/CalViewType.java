@@ -6,5 +6,5 @@ package com.is4300.homez.activity.calendar;
  */
 
 public enum CalViewType {
-    DAY, WEEK, MONTH
+    DAY, MONTH
 }

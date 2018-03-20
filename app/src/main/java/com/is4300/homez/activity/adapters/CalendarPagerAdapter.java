@@ -6,7 +6,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.is4300.homez.activity.calendar.DayFragment;
 import com.is4300.homez.activity.calendar.MonthFragment;
-import com.is4300.homez.activity.calendar.WeekFragment;
 import com.is4300.homez.managers.CalendarManager;
 
 
@@ -27,8 +26,6 @@ public class CalendarPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         if (position == 0) {
             return DayFragment.newInstance(calManager);
-        } else if (position == 1) {
-            return WeekFragment.newInstance(calManager);
         } else {
             return MonthFragment.newInstance();
         }
@@ -36,6 +33,6 @@ public class CalendarPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 2;
     }
 }
