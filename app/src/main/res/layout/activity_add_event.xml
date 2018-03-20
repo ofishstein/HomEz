@@ -10,12 +10,21 @@
     tools:context="com.is4300.homez.activity.calendar.AddEventActivity">
 
 
+    <DatePicker
+        android:id="@+id/datePicker4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eventName"
+        android:layout_centerHorizontal="true"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
+
     <TextView
         android:id="@+id/createEventPrompt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/med_margin"
-        android:layout_marginTop="@dimen/med_margin"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dateFields"
         android:gravity="center"
         android:text="Add New Event"
         android:textSize="30sp" />
@@ -27,19 +36,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/createEventPrompt"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="13dp"
         android:ems="10"
-        android:hint="Event Name"
+        android:hint="Event Title "
         android:inputType="textPersonName" />
-
-
-    <Spinner
-        android:id="@+id/assigneeSpinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/continueButton"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="54dp" />
 
     <Button
         android:id="@+id/continueButton"
@@ -48,5 +48,35 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="Continue" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_above="@id/continueButton"
+        android:layout_weight="1"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/TimeInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="12:00"
+            android:inputType="time" />
+
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="PM"
+            android:textOn="AM" />
+
+    </LinearLayout>
 
 </android.widget.RelativeLayout>
