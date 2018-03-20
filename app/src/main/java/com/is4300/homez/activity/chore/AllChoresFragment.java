@@ -1,15 +1,21 @@
 package com.is4300.homez.activity.chore;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.is4300.homez.R;
 import com.is4300.homez.activity.adapters.AllChoreAdapter;
 import com.is4300.homez.activity.adapters.MyChoreAdapter;
+import com.is4300.homez.activity.billsplit.BillSplitActivity;
 import com.is4300.homez.managers.ChoreManager;
 import com.is4300.homez.model.Chore;
 
@@ -48,7 +54,6 @@ public class AllChoresFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -67,7 +72,6 @@ public class AllChoresFragment extends Fragment {
 
         allPendingChoresList.setAdapter(pendingAdapter);
         allCompletedChoresList.setAdapter(completedAdapter);
-
 
         return view;
     }

@@ -41,6 +41,8 @@ public class Chore {
     public String getAssignee() { return this.assignee;}
     public RecurType getRecurrence() { return this.recurrence; }
 
+    public void setComplete(Boolean newComplete) { complete = newComplete; }
+
     public static List<Chore> generateMockChoreList() {
         List<Chore> choresList = new ArrayList<>();
 

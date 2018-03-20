@@ -1,11 +1,14 @@
 package com.is4300.homez.activity.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.is4300.homez.R;
 import com.is4300.homez.model.Chore;
@@ -82,13 +85,28 @@ public class AllChoreAdapter extends ArrayAdapter<Chore> {
 
         TextView name = convertView.findViewById(R.id.textView3);
         TextView assignee = convertView.findViewById(R.id.assignee);
+        Button choreRemindBtn = convertView.findViewById(R.id.remindButton);
 
         //CheckBox cb = convertView.findViewById(R.id.checkBox1);
-
 
         Chore item = getItem(position);
         name.setText(item.getName());
         assignee.setText(item.getAssignee());
+
+        if (item.isComplete())
+        {
+            choreRemindBtn.setVisibility(View.GONE);
+            name.setTextColor(Color.rgb(174,174,174));
+        }
+
+        choreRemindBtn = (Button) choreRemindBtn.findViewById(R.id.remindButton);
+        choreRemindBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(), "Reminder Sent!", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         return convertView;
     }
