@@ -36,6 +36,16 @@ public class BillSplitActivity extends AppCompatActivity {
     Button payButton2;
     @BindView(R.id.billSplitRemindButton1)
     Button remindButton;
+    @BindView(R.id.editText0)
+    TextView payment0Date;
+    @BindView(R.id.editText3)
+    TextView payment0Memo;
+    @BindView(R.id.editText1)
+    TextView payment1Date;
+    @BindView(R.id.editText4)
+    TextView payment1Memo;
+    @BindView(R.id.editText5)
+    TextView paymentCancel;
 
 
     private com.is4300.homez.activity.adapters.BillSplitAdapter BillSplitAdapter;
@@ -83,15 +93,22 @@ public class BillSplitActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
+
                     }
                 });
                 alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Confirm", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
+                        payment1Date.setVisibility(View.INVISIBLE);
+                        payment1Memo.setVisibility(View.INVISIBLE);
+                        payButton1.setVisibility(View.GONE);
+
+
                     }
                 });
                 alertDialog.show();
+
             }
         });
 
@@ -111,6 +128,9 @@ public class BillSplitActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
+                        payment0Date.setVisibility(View.INVISIBLE);
+                        payment0Memo.setVisibility(View.INVISIBLE);
+                        payButton2.setVisibility(View.GONE);
                     }
                 });
                 alertDialog.show();
@@ -127,6 +147,33 @@ public class BillSplitActivity extends AppCompatActivity {
 
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
+
+            }
+        });
+
+        this.paymentCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog alertDialog = new AlertDialog.Builder(BillSplitActivity.this).create();
+                alertDialog.setTitle("CHARGE CANCELLATION");
+                alertDialog.setMessage(String.format("Cancel charge to Ian for $175.00?"));
+
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Back", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+
+                    }
+                });
+                alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Cancel Payment", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                        paymentCancel.setVisibility(View.INVISIBLE);
+
+                    }
+                });
+
 
             }
         });

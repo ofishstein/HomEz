@@ -13,89 +13,90 @@
 
     <TextView
         android:id="@+id/editText0"
-        android:layout_width="93dp"
+        android:layout_width="49dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"
-        android:layout_toStartOf="@+id/editText3"
+        android:layout_marginTop="65dp"
         android:ems="10"
         android:inputType="date"
-        android:text="11/16" />
+        android:text="11/16"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/editText1"
-        android:layout_width="93dp"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText4"
-        android:layout_alignBottom="@+id/editText4"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_column="0"
+        android:layout_marginTop="112dp"
         android:layout_row="1"
         android:ems="10"
         android:inputType="date"
         android:text="11/02"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="346dp"
         tools:layout_editor_absoluteY="100dp" />
 
     <TextView
         android:id="@+id/editText2"
-        android:layout_width="93dp"
+        android:layout_width="47dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/editText4"
+        android:layout_alignParentTop="true"
         android:layout_column="0"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="16dp"
         android:layout_row="2"
         android:ems="10"
         android:inputType="date"
-        android:text="11/12" />
+        android:text="11/12"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/editText3"
-        android:layout_width="203dp"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText0"
-        android:layout_alignBottom="@+id/editText0"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/editText0"
         android:layout_column="17"
+        android:layout_marginStart="69dp"
         android:layout_row="0"
-        android:layout_toStartOf="@+id/billSplitPayButton2"
         android:ems="10"
         android:inputType="textMultiLine"
         android:text="Connor charged you $12.00 | November cable bill" />
 
     <TextView
         android:id="@+id/editText4"
-        android:layout_width="203dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText3"
+        android:layout_alignStart="@+id/editText3"
+        android:layout_alignTop="@+id/editText1"
         android:layout_column="17"
-        android:layout_marginTop="17dp"
         android:layout_row="1"
-        android:layout_toStartOf="@+id/billSplitPayButton1"
         android:ems="10"
         android:inputType="textMultiLine"
         android:text="Izzi charged you $75.00 | New TV woo!" />
 
     <TextView
         android:id="@+id/editText5"
-        android:layout_width="203dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText2"
-        android:layout_alignBottom="@+id/editText2"
+        android:layout_alignStart="@+id/editText3"
+        android:layout_alignTop="@+id/editText2"
         android:layout_column="17"
         android:layout_row="2"
-        android:layout_toStartOf="@+id/billSplitRemindButton1"
         android:ems="10"
+        android:clickable="true"
         android:inputType="textMultiLine"
         android:text="You charged Ian $175.00 | Montreal Airbnb" />
 
     <Button
         android:id="@+id/billSplitPayButton1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText4"
+        android:layout_height="36dp"
         android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/editText1"
         android:layout_column="18"
         android:layout_row="0"
         android:text="PAY" />
@@ -103,9 +104,9 @@
     <Button
         android:id="@+id/billSplitPayButton2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText4"
+        android:layout_height="37dp"
         android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/editText0"
         android:layout_column="18"
         android:layout_row="1"
         android:text="PAY" />
@@ -113,9 +114,9 @@
     <Button
         android:id="@+id/billSplitRemindButton1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText5"
+        android:layout_height="37dp"
         android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/editText2"
         android:layout_column="18"
         android:layout_row="2"
         android:text="REMIND" />
@@ -127,7 +128,6 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/editText6"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="22dp"
         android:text="Recent Transactions"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -177,6 +177,7 @@
         android:inputType="textPersonName"
         android:text="09/16   Atamai paid you $16.50  | Dinner at Barcelona "
         android:textColor="@color/lightGrey2" />
+
 
     <Button
         android:id="@+id/billSplitSeeMore"
