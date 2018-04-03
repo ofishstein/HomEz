@@ -15,6 +15,10 @@ public class RoommateModel {
         this.last = last;
         this.email = email;
     }
+
+    public RoommateModel() {
+        //Empty constructor
+    }
     public String getFirst(){
         return this.first;
     }
@@ -30,9 +34,36 @@ public class RoommateModel {
     RoommateModel izzi = new RoommateModel("Izzi", "Tripp", "ian.leonard44@gmail.com");
     RoommateModel atamai = new RoommateModel("Atamai", "Tuiolosega", "ian.leonard44@gmail.com");
 
+    // PILOT TEST SUBJECTS
 
+    RoommateModel alex = new RoommateModel("Alex", "Melagrano", "melagrano.a@gmail.com");
+    RoommateModel raj = new RoommateModel("Raj", "Narayan", "narayan.r@gmail.com");
+    RoommateModel zach = new RoommateModel("Zach", "Lowen", "lowen.z@gmail.com");
+    RoommateModel jonathan = new RoommateModel("Jonathan", "Northcott", "northcott.j@gmail.com");
+    RoommateModel eli = new RoommateModel("Eli", "Foreman", "foreman.e@gmail.com");
+    RoommateModel eliza = new RoommateModel("Eliza", "Pedersen", "pedersen.e@gmail.com");
 
+    public RoommateModel getAlex() {
+        return alex;
+    }
 
+    public RoommateModel getRaj() {
+        return raj;
+    }
 
+    public RoommateModel getZach() {
+        return zach;
+    }
 
+    public RoommateModel getJonathan() {
+        return jonathan;
+    }
+
+    public RoommateModel getEli() {
+        return eli;
+    }
+
+    public RoommateModel getEliza() {
+        return eliza;
+    }
 }

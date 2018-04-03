@@ -11,112 +11,71 @@
     tools:context="com.is4300.homez.activity.billsplit.BillSplitActivity">
 
 
-    <TextView
-        android:id="@+id/editText0"
-        android:layout_width="93dp"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/btnTP"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnBurrito"
+        android:text="[03/28]     RAJ CHARGED YOU $5.75   || Toilet Paper"
+        android:textAlignment="textStart"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnBurrito"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:clickable="true"
+        android:layout_below="@+id/btnBillPay"
+        android:text="[04/01]     YOU CHARGED ELI $8.00     || Amelia's Burrito"
+        android:textAlignment="textStart"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnBillPay"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"
-        android:layout_toStartOf="@+id/editText3"
-        android:ems="10"
-        android:inputType="date"
-        android:text="11/16" />
-
-    <TextView
-        android:id="@+id/editText1"
-        android:layout_width="93dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText4"
-        android:layout_alignBottom="@+id/editText4"
-        android:layout_alignParentStart="true"
-        android:layout_column="0"
-        android:layout_row="1"
-        android:ems="10"
-        android:inputType="date"
-        android:text="11/02"
-        tools:layout_editor_absoluteX="346dp"
-        tools:layout_editor_absoluteY="100dp" />
-
-    <TextView
-        android:id="@+id/editText2"
-        android:layout_width="93dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/editText4"
-        android:layout_column="0"
-        android:layout_marginTop="17dp"
-        android:layout_row="2"
-        android:ems="10"
-        android:inputType="date"
-        android:text="11/12" />
-
-    <TextView
-        android:id="@+id/editText3"
-        android:layout_width="203dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText0"
-        android:layout_alignBottom="@+id/editText0"
-        android:layout_column="17"
-        android:layout_row="0"
-        android:layout_toStartOf="@+id/billSplitPayButton2"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="Connor charged you $12.00 | November cable bill" />
-
-    <TextView
-        android:id="@+id/editText4"
-        android:layout_width="203dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText3"
-        android:layout_column="17"
-        android:layout_marginTop="17dp"
-        android:layout_row="1"
-        android:layout_toStartOf="@+id/billSplitPayButton1"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="Izzi charged you $75.00 | New TV woo!" />
-
-    <TextView
-        android:id="@+id/editText5"
-        android:layout_width="203dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText2"
-        android:layout_alignBottom="@+id/editText2"
-        android:layout_column="17"
-        android:layout_row="2"
-        android:layout_toStartOf="@+id/billSplitRemindButton1"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="You charged Ian $175.00 | Montreal Airbnb" />
+        android:text="[04/03]     YOU CHARGED RAJ $18.33
+|| Comcast Bill"
+        android:textAlignment="textStart"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/billSplitPayButton1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText4"
+        android:layout_height="36dp"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
         android:layout_column="18"
+        android:layout_marginTop="130dp"
         android:layout_row="0"
         android:text="PAY" />
 
     <Button
-        android:id="@+id/billSplitPayButton2"
+        android:id="@+id/billSplitRemindButton2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText4"
+        android:layout_height="37dp"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
         android:layout_column="18"
+        android:layout_marginTop="72dp"
         android:layout_row="1"
-        android:text="PAY" />
+        android:text="REMIND" />
 
     <Button
         android:id="@+id/billSplitRemindButton1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText5"
+        android:layout_height="37dp"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
         android:layout_column="18"
+        android:layout_marginTop="12dp"
         android:layout_row="2"
         android:text="REMIND" />
 
@@ -127,7 +86,6 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/editText6"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="22dp"
         android:text="Recent Transactions"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -141,7 +99,7 @@
         android:layout_alignParentStart="true"
         android:ems="10"
         android:inputType="text|textPersonName"
-        android:text="11/09   You paid Ian $6.00           | thanks for the pizza!"
+        android:text="03/25   You paid Zach $6.00      | thanks for the pizza!"
         android:textColor="@color/lightGrey2" />
 
     <TextView
@@ -152,7 +110,7 @@
         android:layout_alignParentStart="true"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="10/02   Oli paid you $23.00          | Groceries"
+        android:text="03/19   Raj paid you $23.00        | Groceries"
         android:textColor="@color/lightGrey2" />
 
     <TextView
@@ -163,7 +121,7 @@
         android:layout_alignParentStart="true"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="09/21   You paid Connor $34.00 | Sept. Cable Bill"
+        android:text="03/09   You paid Eliza $34.00     | Sept. Cable Bill"
         android:textColor="@color/lightGrey2" />
 
     <TextView
@@ -175,8 +133,9 @@
         android:layout_marginBottom="25dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="09/16   Atamai paid you $16.50  | Dinner at Barcelona "
+        android:text="03/01   Eli paid you $16.50          | Dinner at Barcelona "
         android:textColor="@color/lightGrey2" />
+
 
     <Button
         android:id="@+id/billSplitSeeMore"
