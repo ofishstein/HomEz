@@ -16,7 +16,7 @@ import com.is4300.homez.R;
 
 public class AddChoreAssigneeSpinnerAdapter extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
-    String[] spinnerNames={"Ian Leonard","Atamai Tuiolosega","Connor Rouan","Oli Fishstein","Izzi Tripp"};
+    String[] spinnerNames={"Ian","Atamai","Connor","Oli","Izzi"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,4 +42,5 @@ public class AddChoreAssigneeSpinnerAdapter extends AppCompatActivity implements
     @Override
     public void onNothingSelected(AdapterView<?> arg0) {
     }
+
 }
