@@ -1,5 +1,6 @@
 package com.is4300.homez.activity.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import com.is4300.homez.R;
 import com.is4300.homez.activity.chore.EditChoreActivity;
+import com.is4300.homez.activity.chore.MyChoresFragment;
 import com.is4300.homez.model.Chore;
 
 import java.util.List;
@@ -24,14 +26,18 @@ import java.util.List;
 public class MyChoreAdapter extends ArrayAdapter<Chore> {
         List<Chore> modelItems=null;
         Context context;
+        MyChoresFragment fragment;
 
 
 
-    public MyChoreAdapter(Context context, List<Chore> resource) {
+    public MyChoreAdapter(Context context, List<Chore> resource, MyChoresFragment fragment) {
         super(context, R.layout.my_one_chore, resource);
         this.context = context;
         this.modelItems = resource;
-        }
+        this.fragment = fragment;
+
+    }
+
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
@@ -59,6 +65,8 @@ public class MyChoreAdapter extends ArrayAdapter<Chore> {
             public void onClick(View v) {
                 item.setComplete(cb.isChecked());
                 v.invalidate();
+                fragment.updateViews();
+
             }
 
         });

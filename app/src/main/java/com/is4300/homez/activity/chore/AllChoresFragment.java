@@ -1,22 +1,16 @@
 package com.is4300.homez.activity.chore;
 
-import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.is4300.homez.HomEzApp;
 import com.is4300.homez.R;
 import com.is4300.homez.activity.adapters.AllChoreAdapter;
 import com.is4300.homez.activity.adapters.MyChoreAdapter;
-import com.is4300.homez.activity.billsplit.BillSplitActivity;
 import com.is4300.homez.managers.ChoreManager;
 import com.is4300.homez.model.Chore;
 
@@ -34,11 +28,13 @@ public class AllChoresFragment extends Fragment {
     @BindView(R.id.all_completed_chores_list)
     ListView allCompletedChoresList;
 
-    ChoreManager allChoreManager;
+    ChoreManager choreManager;
+    List<Chore> pendingChores;
+    List<Chore> completedChores;
 
     public AllChoresFragment(HomEzApp app) {
         // Required empty public constructor
-        this.allChoreManager = app.choreManager;
+        this.choreManager = app.choreManager;
     }
 
     /**
@@ -58,16 +54,22 @@ public class AllChoresFragment extends Fragment {
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        updateViews();
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_all_chores, container, false);
         ButterKnife.bind(this, view);
 
-        List<Chore> pendingChores = allChoreManager.getUpcomingChores();
+        List<Chore> pendingChores = choreManager.getUpcomingChores();
         AllChoreAdapter pendingAdapter = new AllChoreAdapter(getActivity().getApplicationContext(), pendingChores);
 
-        List<Chore> completedChores = allChoreManager.getCompletedChores();
+        List<Chore> completedChores = choreManager.getCompletedChores();
         AllChoreAdapter completedAdapter = new AllChoreAdapter(getActivity().getApplicationContext(), completedChores);
 
 
@@ -75,5 +77,15 @@ public class AllChoresFragment extends Fragment {
         allCompletedChoresList.setAdapter(completedAdapter);
 
         return view;
+    }
+
+    public void updateViews() {
+        this.pendingChores = choreManager.getUpcomingChores();
+        this.completedChores = choreManager.getCompletedChores();
+        AllChoreAdapter pendingAdapter = new AllChoreAdapter(getActivity().getApplicationContext(), pendingChores);
+        AllChoreAdapter completedAdapter = new AllChoreAdapter(getActivity().getApplicationContext(), completedChores);
+
+        allPendingChoresList.setAdapter(pendingAdapter);
+        allCompletedChoresList.setAdapter(completedAdapter);
     }
 }

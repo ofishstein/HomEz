@@ -92,4 +92,8 @@ public class ChoreManager {
             this.mockChoreList.get(i).index = i;
         }
     }
+
+    public void addMockChore(Chore chore) {
+        this.mockChoreList.add(chore);
+    }
  }

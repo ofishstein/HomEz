@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.is4300.homez.HomEzApp;
 import com.is4300.homez.R;
+import com.is4300.homez.model.Chore;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -26,7 +27,7 @@ public class AddChoreActivity extends AppCompatActivity {
     @BindView(R.id.saveButton)
     Button saveButton;
     @BindView(R.id.assigneeSpinner)
-    Spinner spinner;
+    Spinner assigneeSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ public class AddChoreActivity extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                addChore();
                 onBackPressed();
             }
         });
@@ -52,8 +54,8 @@ public class AddChoreActivity extends AppCompatActivity {
         ArrayAdapter arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, spinnerNames);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //Setting the ArrayAdapter data on the Spinner
-        spinner.setAdapter(arrayAdapter);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        assigneeSpinner.setAdapter(arrayAdapter);
+        assigneeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getApplicationContext(), spinnerNames[position], Toast.LENGTH_LONG).show();
@@ -64,6 +66,14 @@ public class AddChoreActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void addChore() {
+        int newIndex = ((HomEzApp) getApplicationContext()).choreManager.mockChoreList.size();
+        // get all fields except index from the editing objects
+        String assignee = assigneeSpinner.getSelectedItem().toString();
+        Chore newChore = new Chore("stub", false, assignee, Chore.RecurType.WEEKLY, 1, 1, 2018, newIndex);
+        ((HomEzApp) getApplicationContext()).choreManager.addMockChore(newChore);
     }
 
 

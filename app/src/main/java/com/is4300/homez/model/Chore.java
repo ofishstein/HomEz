@@ -30,7 +30,7 @@ public class Chore implements Serializable {
     }
 
 
-    Chore(String name, Boolean complete, String assignee, RecurType recurrence, int day, int mo, int year, int index){ //TODO add recurrence
+    public Chore(String name, Boolean complete, String assignee, RecurType recurrence, int day, int mo, int year, int index){ //TODO add recurrence
         this.name = name;
         this.complete = complete;
         this.assignee = assignee;
