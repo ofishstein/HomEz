@@ -1,16 +1,20 @@
 package com.is4300.homez.activity.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.is4300.homez.R;
+import com.is4300.homez.activity.chore.ChoreActivity;
+import com.is4300.homez.activity.chore.EditChoreActivity;
 import com.is4300.homez.model.Chore;
 
 import java.util.List;
@@ -89,7 +93,7 @@ public class AllChoreAdapter extends ArrayAdapter<Chore> {
 
         //CheckBox cb = convertView.findViewById(R.id.checkBox1);
 
-        Chore item = getItem(position);
+        final Chore item = getItem(position);
         name.setText(item.getName());
         assignee.setText(item.getAssignee());
 
@@ -105,6 +109,18 @@ public class AllChoreAdapter extends ArrayAdapter<Chore> {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(), "Reminder Sent!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!item.isComplete())
+                {
+                    Intent intent = new Intent(context, EditChoreActivity.class);
+                    intent.putExtra("chore", item);
+                    context.startActivity(intent);
+                }
             }
         });
 
