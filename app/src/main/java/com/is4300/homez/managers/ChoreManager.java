@@ -77,4 +77,19 @@ public class ChoreManager {
 
         return completedChores;
     }
-}
+
+    public void updateMockChores(Chore chore) {
+        this.mockChoreList.set(chore.index, chore);
+    }
+
+    public void deleteMockChore(Chore chore) {
+        this.mockChoreList.remove(chore.index);
+        this.updateChoreIndexes();
+    }
+
+    private void updateChoreIndexes() {
+        for (int i = 0; i < this.mockChoreList.size(); i++) {
+            this.mockChoreList.get(i).index = i;
+        }
+    }
+ }

@@ -20,6 +20,7 @@ public class Chore implements Serializable {
     public int dueYear; // due year of chore
     public String assignee; //person it's assigned to //TODO more than one person?  rotating people?
     public RecurType recurrence;
+    public int index;
 
     public enum RecurType { //TODO is this the right place to define this enum
         DAILY,
@@ -29,7 +30,7 @@ public class Chore implements Serializable {
     }
 
 
-    Chore(String name, Boolean complete, String assignee, RecurType recurrence, int day, int mo, int year){ //TODO add recurrence
+    Chore(String name, Boolean complete, String assignee, RecurType recurrence, int day, int mo, int year, int index){ //TODO add recurrence
         this.name = name;
         this.complete = complete;
         this.assignee = assignee;
@@ -55,13 +56,13 @@ public class Chore implements Serializable {
     public static List<Chore> generateMockChoreList() {
         List<Chore> choresList = new ArrayList<>();
 
-        choresList.add(new Chore("Clean Room", false, "Ian Leonard", RecurType.WEEKLY, 1, 1, 2018));
-        choresList.add(new Chore("Empty Dishwasher", true, "Oli Fishstein", RecurType.WEEKLY, 1, 1, 2018));
-        choresList.add(new Chore("Swab the Poopdeck", true,"Izzi Tripp", RecurType.WEEKLY, 1, 1, 2018));
-        choresList.add(new Chore("Buy Toilet Paper", true, "Connor Rouan", RecurType.WEEKLY, 1, 1, 2018));
-        choresList.add(new Chore("Buy Guacamole", false, "Ian Leonard", RecurType.WEEKLY, 1, 1, 2018));
-        choresList.add(new Chore("Feed the Fish", false, "Ian Leonard", RecurType.WEEKLY, 1, 1, 2018));
-        choresList.add(new Chore("Scrub the Bathtub", true, "Ian Leonard", RecurType.WEEKLY, 1, 1, 2018));
+        choresList.add(new Chore("Clean Room", false, "Ian Leonard", RecurType.WEEKLY, 1, 1, 2018, 0));
+        choresList.add(new Chore("Empty Dishwasher", true, "Oli Fishstein", RecurType.WEEKLY, 1, 1, 2018, 1));
+        choresList.add(new Chore("Swab the Poopdeck", true,"Izzi Tripp", RecurType.WEEKLY, 1, 1, 2018, 2));
+        choresList.add(new Chore("Buy Toilet Paper", true, "Connor Rouan", RecurType.WEEKLY, 1, 1, 2018, 3));
+        choresList.add(new Chore("Buy Guacamole", false, "Ian Leonard", RecurType.WEEKLY, 1, 1, 2018, 4));
+        choresList.add(new Chore("Feed the Fish", false, "Ian Leonard", RecurType.WEEKLY, 1, 1, 2018, 5));
+        choresList.add(new Chore("Scrub the Bathtub", true, "Ian Leonard", RecurType.WEEKLY, 1, 1, 2018, 6));
 
 
         return choresList;

@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 
+import com.is4300.homez.HomEzApp;
 import com.is4300.homez.R;
 import com.is4300.homez.activity.settings.PersonalSettingsActivity;
 import com.is4300.homez.model.Chore;
@@ -58,7 +59,7 @@ public class EditChoreActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 chore.editChore(choreTitle.getText().toString(), dateSpinner.getDayOfMonth(), dateSpinner.getMonth(), dateSpinner.getYear());
-
+                ((HomEzApp) getApplicationContext()).choreManager.updateMockChores(chore);
                 Intent intent = new Intent(getApplicationContext(), ChoreActivity.class);
                 startActivity(intent);
             }
