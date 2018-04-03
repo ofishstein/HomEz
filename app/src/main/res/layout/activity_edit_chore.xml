@@ -1,9 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/lrg_margin"
+    android:orientation="vertical"
+    android:textStyle="bold"
     tools:context="com.is4300.homez.activity.chore.EditChoreActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/editChore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Chore"
+        android:textSize="20sp"
+        android:lines="1"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:gravity="left"/>
+
+    <EditText
+        android:id="@+id/editChoreTitle"
+        android:layout_below="@id/editChore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textSize="14sp"
+        android:ems="10"
+        style="@style/customEditText"
+        android:hint="Chore Title" />
+
+    <Spinner
+        android:id="@+id/assigneeSpinner"
+        android:layout_below="@id/choreTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <!--TODO add assignee-->
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/assigneeSpinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        style="@style/customButton"
+        android:text="Save Changes" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/saveButton"
+        style="@style/customButton"
+        android:text="Delete Chore" />
+
+</android.widget.RelativeLayout>
