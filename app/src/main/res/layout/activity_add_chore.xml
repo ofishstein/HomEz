@@ -43,10 +43,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/spinnerLayout"
         android:layout_centerHorizontal="true"
-        android:datePickerMode="spinner"
+        android:layout_marginTop="38dp"
         android:calendarViewShown="false"
-        android:layout_marginTop="@dimen/med_margin"
-        android:background="@drawable/background_edit_text"/>
+        android:background="@drawable/background_edit_text"
+        android:datePickerMode="spinner" />
+
     <!--TODO add/fix date picker to include day of week-->
 
 

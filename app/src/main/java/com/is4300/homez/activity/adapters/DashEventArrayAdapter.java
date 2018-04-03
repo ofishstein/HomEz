@@ -53,16 +53,6 @@ public class DashEventArrayAdapter extends ArrayAdapter<EventMock> {
         return view;
     }
 
-    @Override
-    public boolean areAllItemsEnabled() {
-        return false;
-    }
-
-    @Override
-    public boolean isEnabled(int position) {
-        return false;
-    }
-
     static class ViewHolder {
         @BindView(R.id.eventName)
         TextView eventName;

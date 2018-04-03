@@ -36,15 +36,11 @@ public class CalendarAdapter extends ArrayAdapter<EventMock> {
         LayoutInflater inflater = LayoutInflater.from(getContext());
         TextView time;
         TextView name;
-        if (viewType.equals(CalViewType.WEEK)) {
-            convertView = inflater.inflate(R.layout.item_calendar_event_stacked, parent, false);
-            time = convertView.findViewById(R.id.eventTimeS);
-            name = convertView.findViewById(R.id.eventNameS);
-        } else {
-            convertView = inflater.inflate(R.layout.item_dash_calendar_event, parent, false);
-            time = convertView.findViewById(R.id.eventTime);
-            name = convertView.findViewById(R.id.eventName);
-        }
+
+        convertView = inflater.inflate(R.layout.item_dash_calendar_event, parent, false);
+        time = convertView.findViewById(R.id.eventTime);
+        name = convertView.findViewById(R.id.eventName);
+
 
         EventMock item = getItem(position);
         time.setText(item.time);

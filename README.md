@@ -1,3 +1,7 @@
 # HomEz
 
-NOTE:  For testing purposes, simply download from the Master branch.  Per instructions for the class, we will not push to / update the master branch for the duration of user testing, and will instead push any updates to a separate testing branch.
+NOTE:  For testing purposes, DO NOT DOWNLOAD MASTER
+
+Instead download the branch associated with the assignment in question. For example, to view code submitted for assignment P6, download the P6 branch.
+
+We will not update the code in a particular assignment branch after the due date of the assignment.
