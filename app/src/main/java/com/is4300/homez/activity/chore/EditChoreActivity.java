@@ -68,8 +68,7 @@ public class EditChoreActivity extends AppCompatActivity {
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //chore.deleteChore(choreList);
-
+                ((HomEzApp) getApplicationContext()).choreManager.deleteMockChore(chore);
                 Intent intent = new Intent(getApplicationContext(), ChoreActivity.class);
                 startActivity(intent);
             }
