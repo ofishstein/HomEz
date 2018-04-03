@@ -11,8 +11,8 @@ import java.util.List;
 
 public class BillSplitModel {
 
-    Roommate assigner;             //the user paying/charging others
-    ArrayList<Roommate> assignees; //the recipients of the payment or charge
+    RoommateModel assigner;             //the user paying/charging others
+    ArrayList<RoommateModel> assignees; //the recipients of the payment or charge
     double chargeAmount;                //the amount paid/charged
     int splitBetween;                   //the number of recipients to split charge between
     String memo;                        //payment reason
@@ -21,7 +21,7 @@ public class BillSplitModel {
     payOrCharge requestType;            //payment or charge?
 
 
-    public BillSplitModel(Roommate assigner, ArrayList<Roommate> assignees, double chargeAmount, String memo,
+    public BillSplitModel(RoommateModel assigner, ArrayList<RoommateModel> assignees, double chargeAmount, String memo,
                           String date, boolean paymentStatus, payOrCharge requestType) {
         this.assigner = assigner;
         this.assignees = assignees;
@@ -34,51 +34,41 @@ public class BillSplitModel {
     }
 
 
+
+
     public static List<BillSplitModel> generateMockPaymentList() throws IllegalAccessException, InstantiationException {
         // list of dummy payments to use for Bill Split Activity
         List<BillSplitModel> mockPayments = new ArrayList<>();
 
-        // sample assigner for mock purposes
-        Roommate connor;
-        connor = new Roommate("Connor", "Rouan", "crouan@gmail.com");
-
-        // sample assignees for mock purposes
-        Roommate atamai;
-        atamai = new Roommate("Atamai", "Tuiolosega", "atuiolosega@gmail.com");
-
-        Roommate ian;
-        ian = new Roommate("Ian", "Leonard", "ileonard@gmail.com");
-
-        Roommate izzi;
-        izzi = new Roommate("Izzi", "Tripp", "itripp@gmail.com");
-
-        Roommate oli;
-        oli = new Roommate("Oli", "Fishstein", "ofish@gmail.com");
 
         // list of dummy assignees, part 1
-        ArrayList<Roommate> sampleAssignees1 = new ArrayList<>();
+        ArrayList<RoommateModel> sampleAssignees1 = new ArrayList<>();
 
-        sampleAssignees1.add(atamai);
-        sampleAssignees1.add(ian);
+        RoommateModel roommateModel = new RoommateModel();
+
+
+
+        sampleAssignees1.add(roommateModel.alex);
+        sampleAssignees1.add(roommateModel.eliza);
 
         // list of dummy assignees, part 2
-        ArrayList<Roommate> sampleAssignees2 = new ArrayList<>();
+        ArrayList<RoommateModel> sampleAssignees2 = new ArrayList<>();
 
-        sampleAssignees1.add(izzi);
+        sampleAssignees1.add(roommateModel.eli);
 
         // list of dummy assignees, part 3
-        ArrayList<Roommate> sampleAssignees3 = new ArrayList<>();
+        ArrayList<RoommateModel> sampleAssignees3 = new ArrayList<>();
 
-        sampleAssignees3.add(oli);
-        sampleAssignees3.add(atamai);
+        sampleAssignees3.add(roommateModel.zach);
+        sampleAssignees3.add(roommateModel.raj);
 
-        BillSplitModel paymentMock1 = new BillSplitModel(connor, sampleAssignees1, 44.00,
+        BillSplitModel paymentMock1 = new BillSplitModel(roommateModel.alex, sampleAssignees1, 44.00,
                 "For Cable", "11/01", false, payOrCharge.CHARGE); //connor charges atamai and ian, REMIND button
 
-        BillSplitModel paymentMock2 = new BillSplitModel(connor, sampleAssignees2,  10.00,
+        BillSplitModel paymentMock2 = new BillSplitModel(roommateModel.eli, sampleAssignees2,  10.00,
                 "Burrito!", "11/05", false, payOrCharge.PAY); //connor pays izzi, PAY button
 
-        BillSplitModel paymentMock3 = new BillSplitModel(connor, sampleAssignees3,  200.00,
+        BillSplitModel paymentMock3 = new BillSplitModel(roommateModel.eliza, sampleAssignees3,  200.00,
                 "New TV", "10/15", true, payOrCharge.CHARGE); //connor charges oli and atamai, archived
 
         mockPayments.add(paymentMock1);
