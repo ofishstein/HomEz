@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.is4300.homez.HomEzApp;
 import com.is4300.homez.activity.chore.AllChoresFragment;
 import com.is4300.homez.activity.chore.MyChoresFragment;
 import com.is4300.homez.managers.ChoreManager;
@@ -14,19 +15,19 @@ import com.is4300.homez.managers.ChoreManager;
 
 public class ChorePagerAdapter extends FragmentPagerAdapter {
 
-    ChoreManager choreManager;
+    HomEzApp app;
 
-    public ChorePagerAdapter(FragmentManager fm, ChoreManager choreManager) {
+    public ChorePagerAdapter(FragmentManager fm, HomEzApp app) {
         super(fm);
-        this.choreManager = choreManager;
+        this.app = app;
     }
 
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return MyChoresFragment.newInstance(choreManager);
+            return MyChoresFragment.newInstance(app);
         } else {
-            return AllChoresFragment.newInstance(choreManager);
+            return AllChoresFragment.newInstance(app);
         }
     }
 

@@ -19,6 +19,9 @@ public class HomEzApp extends Application {
     public ChoreManager choreManager;
     public StatusManager statusManager;
 
+    public String[] spinnerNames = {"Ian Leonard","Atamai Tuiolosega","Connor Rouan","Oli Fishstein","Izzi Tripp"};
+    public String activeUserMock = "Ian Leonard";
+
     Roommate ian = new Roommate("Ian", "Leonard", "ian.leonard44@gmail.com");
     Roommate connor = new Roommate("Connor", "Rouan", "rouan.c@husky.neu.edu");
     Roommate oli = new Roommate("Oli", "Fishstein", "ian.leonard44@gmail.com");

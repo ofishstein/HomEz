@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.is4300.homez.HomEzApp;
 import com.is4300.homez.R;
 import com.is4300.homez.activity.adapters.MyChoreAdapter;
 import com.is4300.homez.managers.ChoreManager;
@@ -23,7 +24,7 @@ import butterknife.ButterKnife;
 
 public class MyChoresFragment extends Fragment {
 
-    String activeUserMock = new String("Ian Leonard");
+    String activeUserMock;
 
     @BindView(R.id.my_pending_chores_list)
     ListView myPendingChoresList;
@@ -33,9 +34,10 @@ public class MyChoresFragment extends Fragment {
 
     ChoreManager choreManager;
 
-    public MyChoresFragment(ChoreManager choreManager) {
+    public MyChoresFragment(HomEzApp app) {
         // Required empty public constructor
-        this.choreManager = choreManager;
+        this.choreManager = app.choreManager;
+        this.activeUserMock = app.activeUserMock;
     }
 
     /**
@@ -44,8 +46,8 @@ public class MyChoresFragment extends Fragment {
      *
      * @return A new instance of fragment JoinHouseFragment.
      */
-    public static MyChoresFragment newInstance(ChoreManager choreManager) {
-        MyChoresFragment fragment = new MyChoresFragment(choreManager);
+    public static MyChoresFragment newInstance(HomEzApp app) {
+        MyChoresFragment fragment = new MyChoresFragment(app);
         return fragment;
     }
 
@@ -55,6 +57,7 @@ public class MyChoresFragment extends Fragment {
 
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -62,7 +65,7 @@ public class MyChoresFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_my_chores, container, false);
         ButterKnife.bind(this, view);
 
-        final List<Chore> pendingChores = choreManager.getMyUpcomingChores(activeUserMock);
+        List<Chore> pendingChores = choreManager.getMyUpcomingChores(activeUserMock);
         MyChoreAdapter pendingAdapter = new MyChoreAdapter(getActivity().getApplicationContext(), pendingChores);
 
         List<Chore> completedChores = choreManager.getMyCompletedChores(activeUserMock);

@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.is4300.homez.HomEzApp;
 import com.is4300.homez.R;
 
 import butterknife.BindView;
@@ -20,8 +21,7 @@ import butterknife.ButterKnife;
 
 public class AddChoreActivity extends AppCompatActivity {
 
-    String[] spinnerNames={"Ian Leonard","Atamai Tuiolosega","Connor Rouan","Oli Fishstein","Izzi Tripp"};
-
+    String[] spinnerNames;
 
     @BindView(R.id.saveButton)
     Button saveButton;
@@ -33,6 +33,7 @@ public class AddChoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_chore);
         ButterKnife.bind(this);
+        this.spinnerNames = ((HomEzApp) getApplicationContext()).spinnerNames;
         setOnClickListener();
         setUpSpinner();
     }

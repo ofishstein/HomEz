@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.is4300.homez.HomEzApp;
 import com.is4300.homez.R;
 import com.is4300.homez.activity.adapters.AllChoreAdapter;
 import com.is4300.homez.activity.adapters.MyChoreAdapter;
@@ -35,9 +36,9 @@ public class AllChoresFragment extends Fragment {
 
     ChoreManager allChoreManager;
 
-    public AllChoresFragment(ChoreManager allChoreManager) {
+    public AllChoresFragment(HomEzApp app) {
         // Required empty public constructor
-        this.allChoreManager = allChoreManager;
+        this.allChoreManager = app.choreManager;
     }
 
     /**
@@ -46,8 +47,8 @@ public class AllChoresFragment extends Fragment {
      *
      * @return A new instance of fragment JoinHouseFragment.
      */
-    public static AllChoresFragment newInstance(ChoreManager allChoreManager) {
-        AllChoresFragment fragment = new AllChoresFragment(allChoreManager);
+    public static AllChoresFragment newInstance(HomEzApp app) {
+        AllChoresFragment fragment = new AllChoresFragment(app);
         return fragment;
     }
 

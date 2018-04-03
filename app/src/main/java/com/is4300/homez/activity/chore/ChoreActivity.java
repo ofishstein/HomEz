@@ -31,7 +31,7 @@ public class ChoreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chore);
         ButterKnife.bind(this);
 
-        this.chorePagerAdapter = new ChorePagerAdapter(getSupportFragmentManager(), ((HomEzApp) getApplicationContext()).choreManager);
+        this.chorePagerAdapter = new ChorePagerAdapter(getSupportFragmentManager(), ((HomEzApp) getApplicationContext()));
         this.choreViewPager.setAdapter(chorePagerAdapter);
         this.choreViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(choreTabLayout));
         this.choreTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(choreViewPager));

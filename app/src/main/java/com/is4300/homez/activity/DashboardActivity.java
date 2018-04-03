@@ -50,18 +50,20 @@ public class DashboardActivity extends AppCompatActivity {
     @BindView(R.id.eventList)
     ListView eventListView;
 
-    String activeUserMock = new String("Ian Leonard");
+    String activeUserMock;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+        this.activeUserMock = ((HomEzApp) getApplicationContext()).activeUserMock;
         ButterKnife.bind(this);
         setUpStatusList();
         setUpChoreList();
         setUpEventList();
         setOnClickListeners();
+
     }
 
     @Override
