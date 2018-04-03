@@ -32,20 +32,16 @@ public class BillSplitActivity extends AppCompatActivity {
 
     @BindView(R.id.billSplitPayButton1)
     Button payButton1;
-    @BindView(R.id.billSplitPayButton2)
-    Button payButton2;
     @BindView(R.id.billSplitRemindButton1)
-    Button remindButton;
-    @BindView(R.id.editText0)
-    TextView payment0Date;
-    @BindView(R.id.editText3)
-    TextView payment0Memo;
-    @BindView(R.id.editText1)
-    TextView payment1Date;
-    @BindView(R.id.editText4)
-    TextView payment1Memo;
-    @BindView(R.id.editText5)
-    TextView paymentCancel;
+    Button remindButton1;
+    @BindView(R.id.billSplitRemindButton2)
+    Button remindButton2;
+    @BindView(R.id.btnTP)
+    Button tp;
+    @BindView(R.id.btnBillPay)
+    Button comcast;
+    @BindView(R.id.btnBurrito)
+    Button burrito;
 
 
     private com.is4300.homez.activity.adapters.BillSplitAdapter BillSplitAdapter;
@@ -84,11 +80,14 @@ public class BillSplitActivity extends AppCompatActivity {
 
 
         this.payButton1.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View view) {
+
                 AlertDialog alertDialog = new AlertDialog.Builder(BillSplitActivity.this).create();
                 alertDialog.setTitle("PAYMENT CONFIRMATION");
-                alertDialog.setMessage(String.format("Pay Izzi $75.00?"));
+                alertDialog.setMessage(String.format("Pay Raj $5.75?"));
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -100,8 +99,7 @@ public class BillSplitActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
-                        payment1Date.setVisibility(View.INVISIBLE);
-                        payment1Memo.setVisibility(View.INVISIBLE);
+                        tp.setVisibility(View.INVISIBLE);
                         payButton1.setVisibility(View.GONE);
 
 
@@ -110,39 +108,15 @@ public class BillSplitActivity extends AppCompatActivity {
                 alertDialog.show();
 
             }
-        });
 
-        this.payButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog alertDialog = new AlertDialog.Builder(BillSplitActivity.this).create();
-                alertDialog.setTitle("PAYMENT CONFIRMATION");
-                alertDialog.setMessage(String.format("Pay Connor $12.00?"));
-                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                });
-                alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Confirm", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                        payment0Date.setVisibility(View.INVISIBLE);
-                        payment0Memo.setVisibility(View.INVISIBLE);
-                        payButton2.setVisibility(View.GONE);
-                    }
-                });
-                alertDialog.show();
-            }
         });
 
 
-        this.remindButton.setOnClickListener(new View.OnClickListener() {
+        this.remindButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Context context = getApplicationContext();
-                CharSequence text = "You've sent Ian a reminder!";
+                CharSequence text = "You've sent Raj a reminder!";
                 int duration = Toast.LENGTH_LONG;
 
                 Toast toast = Toast.makeText(context, text, duration);
@@ -151,12 +125,27 @@ public class BillSplitActivity extends AppCompatActivity {
             }
         });
 
-        this.paymentCancel.setOnClickListener(new View.OnClickListener() {
+        this.remindButton2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Context context = getApplicationContext();
+                CharSequence text = "You've sent Eli a reminder!";
+                int duration = Toast.LENGTH_LONG;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+
+            }
+        });
+
+        this.burrito.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 AlertDialog alertDialog = new AlertDialog.Builder(BillSplitActivity.this).create();
                 alertDialog.setTitle("CHARGE CANCELLATION");
-                alertDialog.setMessage(String.format("Cancel charge to Ian for $175.00?"));
+                alertDialog.setMessage(String.format("Cancel charge to Eli for $8.00?"));
 
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Back", new DialogInterface.OnClickListener() {
                     @Override
@@ -165,24 +154,54 @@ public class BillSplitActivity extends AppCompatActivity {
 
                     }
                 });
+
                 alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Cancel Payment", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
-                        paymentCancel.setVisibility(View.INVISIBLE);
+                        burrito.setVisibility(View.INVISIBLE);
+                        remindButton2.setVisibility(View.INVISIBLE);
 
                     }
                 });
 
-
+                alertDialog.show();
             }
         });
 
 
+        this.comcast.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                AlertDialog alertDialog = new AlertDialog.Builder(BillSplitActivity.this).create();
+                alertDialog.setTitle("CHARGE CANCELLATION");
+                alertDialog.setMessage(String.format("Cancel charge to Raj for $18.33?"));
+
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Back", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+
+                    }
+                });
+
+                alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Cancel Payment", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                        burrito.setVisibility(View.INVISIBLE);
+                        remindButton2.setVisibility(View.INVISIBLE);
+
+                    }
+                });
+
+                alertDialog.show();
+            }
+        });
+
 
     }
-
-
 }
 
 
