@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -23,11 +25,21 @@ import butterknife.ButterKnife;
 public class AddChoreActivity extends AppCompatActivity {
 
     String[] spinnerNames;
+    String textChoreTitle;
+
+
 
     @BindView(R.id.saveButton)
     Button saveButton;
+
     @BindView(R.id.assigneeSpinner)
     Spinner assigneeSpinner;
+
+    @BindView(R.id.choreTitle)
+    EditText choreTitle;
+
+    @BindView(R.id.datePickerAdd)
+    DatePicker dateSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +55,7 @@ public class AddChoreActivity extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                textChoreTitle = choreTitle.getText().toString();
                 addChore();
                 onBackPressed();
             }
@@ -72,7 +85,8 @@ public class AddChoreActivity extends AppCompatActivity {
         int newIndex = ((HomEzApp) getApplicationContext()).choreManager.mockChoreList.size();
         // get all fields except index from the editing objects
         String assignee = assigneeSpinner.getSelectedItem().toString();
-        Chore newChore = new Chore("stub", false, assignee, Chore.RecurType.WEEKLY, 1, 1, 2018, newIndex);
+
+        Chore newChore = new Chore(textChoreTitle, false, assignee, Chore.RecurType.WEEKLY, dateSpinner.getDayOfMonth(), dateSpinner.getMonth(), dateSpinner.getYear(), newIndex);
         ((HomEzApp) getApplicationContext()).choreManager.addMockChore(newChore);
     }
 
