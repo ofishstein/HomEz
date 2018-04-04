@@ -47,7 +47,7 @@ public class DashEventArrayAdapter extends ArrayAdapter<EventMock> {
 
         if (event != null) {
             holder.eventName.setText(event.eventName);
-            holder.eventTime.setText(event.time);
+            holder.eventTime.setText(event.startTime);
         }
 
         return view;

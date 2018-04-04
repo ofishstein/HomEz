@@ -25,7 +25,7 @@ public class CalendarAdapter extends ArrayAdapter<EventMock> {
     private CalViewType viewType;
 
     public CalendarAdapter(@NonNull Context context, List<EventMock> resource, CalViewType v) {
-        super(context, R.layout.item_dash_calendar_event, resource);
+        super(context, R.layout.item_calendar_event_stacked, resource);
         this.context = context;
         this.events = resource;
         this.viewType = v;
@@ -34,16 +34,18 @@ public class CalendarAdapter extends ArrayAdapter<EventMock> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(getContext());
+        TextView day;
         TextView time;
         TextView name;
 
-        convertView = inflater.inflate(R.layout.item_dash_calendar_event, parent, false);
+        convertView = inflater.inflate(R.layout.item_calendar_event_stacked, parent, false);
+        day = convertView.findViewById(R.id.weekDay);
         time = convertView.findViewById(R.id.eventTime);
         name = convertView.findViewById(R.id.eventName);
 
-
         EventMock item = getItem(position);
-        time.setText(item.time);
+        day.setText(item.weekDay);
+        time.setText(item.startTime);
         name.setText(item.eventName);
 
         return convertView;
