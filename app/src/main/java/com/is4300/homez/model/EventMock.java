@@ -9,19 +9,22 @@ import java.util.List;
  */
 
 public class EventMock {
-    public String time;
+    public String weekDay;
+    public String startTime;
     public String eventName;
 
-    public EventMock(String time, String eventName) {
-        this.time = time;
+    public EventMock(String day, String time, String eventName) {
+        this.weekDay = day;
+        this.startTime = time;
         this.eventName = eventName;
     }
 
     public static List<EventMock> generateMockEventList() {
         List<EventMock> mockEvents = new ArrayList<>();
-        mockEvents.add(new EventMock("10:00 AM", "Apartment Brunch"));
-        mockEvents.add(new EventMock("2:00 PM", "Dog Walking"));
-        mockEvents.add(new EventMock("10:00 PM", "Costume Party"));
+        mockEvents.add(new EventMock("Wed", "5:30 PM",  "apartment showing"));
+        mockEvents.add(new EventMock("Thur","10:00 AM",  "Eliza study group (living room"));
+        mockEvents.add(new EventMock("Sat", "8:30 PM", "Zach's friends pregame (15+ people)"));
+        mockEvents.add(new EventMock("Sun", "7:00 AM",  "AndroidCon @ Pru"));
 
         return mockEvents;
     }

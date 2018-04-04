@@ -10,18 +10,33 @@
     android:paddingTop="@dimen/med_margin">
 
     <TextView
-        android:id="@+id/eventTimeS"
+        android:id="@+id/weekDay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/med_margin"
+        tools:text="M" />
+
+    <TextView
+        android:id="@+id/eventTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/weekDay"
         tools:text="00:00 pm" />
 
     <TextView
-        android:id="@+id/eventNameS"
+        android:id="@+id/dashEvent"
+        android:layout_toEndOf="@+id/eventTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/eventTimeS"
+        android:layout_marginEnd="@dimen/med_margin"
+        android:text="@string/dash" />
+
+    <TextView
+        android:id="@+id/eventName"
+        android:layout_toEndOf="@+id/dashEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         tools:text="Event Name" />
 
 </RelativeLayout>
