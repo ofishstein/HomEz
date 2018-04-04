@@ -1,31 +1,32 @@
 package com.is4300.homez.activity.chore;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.is4300.homez.HomEzApp;
 import com.is4300.homez.R;
-import com.is4300.homez.activity.settings.PersonalSettingsActivity;
 import com.is4300.homez.model.Chore;
-
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class EditChoreActivity extends AppCompatActivity {
 
+    String[] spinnerNames;
+
     @BindView(R.id.editChoreTitle)
     EditText choreTitle;
 
-    @BindView(R.id.assigneeSpinner)
+    @BindView(R.id.editAssigneeSpinner)
     Spinner assigneeSpinner;
 
     @BindView(R.id.datePicker)
@@ -48,10 +49,13 @@ public class EditChoreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit_chore);
         ButterKnife.bind(this);
 
+        this.spinnerNames = ((HomEzApp) getApplicationContext()).spinnerNames;
+
         choreTitle.setText(chore.getName());
         //assigneeSpinner.setSelection(arraySpinner.getPosition(chore.getAssignee()));
         dateSpinner.updateDate(chore.getDueYear(), chore.getDueMo(), chore.getDueDay());
         setOnClickListeners();
+        setUpSpinner();
     }
 
     private void setOnClickListeners() {
@@ -71,6 +75,25 @@ public class EditChoreActivity extends AppCompatActivity {
                 ((HomEzApp) getApplicationContext()).choreManager.deleteMockChore(chore);
                 Intent intent = new Intent(getApplicationContext(), ChoreActivity.class);
                 startActivity(intent);
+            }
+        });
+    }
+
+    private void setUpSpinner() {
+        //Creating the ArrayAdapter instance having the bank name list
+        ArrayAdapter arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, spinnerNames);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //Setting the ArrayAdapter data on the Spinner
+        assigneeSpinner.setAdapter(arrayAdapter);
+        assigneeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getApplicationContext(), spinnerNames[position], Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
     }
