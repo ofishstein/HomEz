@@ -67,9 +67,9 @@ public class Chore implements Serializable {
 
     //ability to edit a chore that has already been created
     // TODO add assignee into the method once that spinner is working; same w/ recurrance
-    public void editChore(String name, int day, int mo, int year){
+    public void editChore(String name, String assignee, int day, int mo, int year){
         this.name = name;
-        //this.assignee = assignee;
+        this.assignee = assignee;
         //this.recurrence = recurrence;
         this.dueDay = day;
         this.dueMo = mo;
