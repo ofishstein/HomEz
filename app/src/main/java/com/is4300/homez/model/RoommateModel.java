@@ -43,9 +43,7 @@ public class RoommateModel {
     RoommateModel eli = new RoommateModel("Eli", "Foreman", "foreman.e@gmail.com");
     RoommateModel eliza = new RoommateModel("Eliza", "Pedersen", "pedersen.e@gmail.com");
 
-    public RoommateModel getAlex() {
-        return alex;
-    }
+    public RoommateModel getAlex() { return alex; }
 
     public RoommateModel getRaj() {
         return raj;
@@ -66,4 +64,7 @@ public class RoommateModel {
     public RoommateModel getEliza() {
         return eliza;
     }
+
+    public boolean equals(RoommateModel roommate) { return this.email.equals(roommate.getEmail()); }
+
 }

@@ -7,6 +7,7 @@ import com.is4300.homez.managers.CalendarManager;
 import com.is4300.homez.managers.ChoreManager;
 import com.is4300.homez.managers.StatusManager;
 import com.is4300.homez.model.Roommate;
+import com.is4300.homez.model.RoommateModel;
 
 /**
  * Created by ofishstein on 2/25/18.

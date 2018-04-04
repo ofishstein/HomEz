@@ -9,20 +9,8 @@
     android:textStyle="bold"
     tools:context="com.is4300.homez.activity.chore.EditChoreActivity">
 
-    <TextView
-        android:id="@+id/editChore"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Edit Chore"
-        android:textSize="20sp"
-        android:lines="1"
-        android:textStyle="bold"
-        android:layout_marginBottom="20dp"
-        android:gravity="left"/>
-
     <EditText
         android:id="@+id/editChoreTitle"
-        android:layout_below="@id/editChore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
@@ -31,19 +19,27 @@
         style="@style/customEditText"
         android:hint="Chore Title" />
 
-    <Spinner
-        android:id="@+id/assigneeSpinner"
-        android:layout_below="@id/choreTitle"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/editChoreTitle"
+        android:layout_marginTop="@dimen/med_margin"
+        android:id="@+id/spinnerLayout"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_edit_text">
 
-    <!--TODO add assignee-->
+        <Spinner
+            android:id="@+id/assigneeSpinner"
+            android:layout_width="fill_parent"
+            android:padding="@dimen/med_margin"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
 
     <DatePicker
         android:id="@+id/datePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/assigneeSpinner"
+        android:layout_below="@+id/spinnerLayout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
         android:calendarViewShown="false"

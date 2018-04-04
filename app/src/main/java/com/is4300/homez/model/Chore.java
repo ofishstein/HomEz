@@ -15,7 +15,7 @@ public class Chore implements Serializable {
     public int dueDay; // due day of chore
     public int dueMo; // due month of chore
     public int dueYear; // due year of chore
-    public String assignee; //person it's assigned to //TODO more than one person?  rotating people?
+    public String assignee; //person it's assigned to
     public RecurType recurrence;
     public int index;
 
@@ -45,7 +45,7 @@ public class Chore implements Serializable {
     public int getDueDay() { return this.dueDay; }
     public int getDueMo() { return this.dueMo; }
     public int getDueYear() { return this.dueYear; }
-    public String getAssignee() { return this.assignee;}
+    public String getAssignee() { return this.assignee; };
     public RecurType getRecurrence() { return this.recurrence; }
 
     public void setComplete(Boolean newComplete) { complete = newComplete; }
@@ -55,7 +55,7 @@ public class Chore implements Serializable {
 
         choresList.add(new Chore("Clean Room", false, "Raj Narayan", RecurType.WEEKLY, 1, 1, 2018, 0));
         choresList.add(new Chore("Empty Dishwasher", true, "Zach Lowen", RecurType.WEEKLY, 1, 1, 2018, 1));
-        choresList.add(new Chore("Swab the Poopdeck", true,"Jonathan Northcott", RecurType.WEEKLY, 1, 1, 2018, 2));
+        choresList.add(new Chore("Swab the Poopdeck", true, "Jonathan Northcott", RecurType.WEEKLY, 1, 1, 2018, 2));
         choresList.add(new Chore("Buy Toilet Paper", true, "Eli Foreman", RecurType.WEEKLY, 1, 1, 2018, 3));
         choresList.add(new Chore("Buy Guacamole", false, "Alex Melagrano", RecurType.WEEKLY, 1, 1, 2018, 4));
         choresList.add(new Chore("Feed the Fish", true, "Alex Melagrano", RecurType.WEEKLY, 1, 1, 2018, 5));
@@ -66,10 +66,9 @@ public class Chore implements Serializable {
     }
 
     //ability to edit a chore that has already been created
-    // TODO add assignee into the method once that spinner is working; same w/ recurrance
-    public void editChore(String name, int day, int mo, int year){
+    public void editChore(String name, String assignee, int day, int mo, int year){
         this.name = name;
-        //this.assignee = assignee;
+        this.assignee = assignee;
         //this.recurrence = recurrence;
         this.dueDay = day;
         this.dueMo = mo;
