@@ -53,13 +53,13 @@ public class Chore implements Serializable {
     public static List<Chore> generateMockChoreList() {
         List<Chore> choresList = new ArrayList<>();
 
-        choresList.add(new Chore("Clean Room", false, "Sophia Keins", RecurType.WEEKLY, 1, 1, 2018, 0));
-        choresList.add(new Chore("Empty Dishwasher", true, "Sophia Keins", RecurType.WEEKLY, 1, 1, 2018, 1));
-        choresList.add(new Chore("Swab the Poopdeck", true,"Emma Katz", RecurType.WEEKLY, 1, 1, 2018, 2));
-        choresList.add(new Chore("Buy Toilet Paper", true, "Danielle Diraddo", RecurType.WEEKLY, 1, 1, 2018, 3));
-        choresList.add(new Chore("Buy Guacamole", false, "Anna Cullen", RecurType.WEEKLY, 1, 1, 2018, 4));
-        choresList.add(new Chore("Feed the Fish", true, "Anna Cullen", RecurType.WEEKLY, 1, 1, 2018, 5));
-        choresList.add(new Chore("Scrub the Bathtub", true, "Anna Cullen", RecurType.WEEKLY, 1, 1, 2018, 6));
+        choresList.add(new Chore("Clean Room", false, "Lydia Auch", RecurType.WEEKLY, 1, 1, 2018, 0));
+        choresList.add(new Chore("Empty Dishwasher", true, "Lydia Auch", RecurType.WEEKLY, 1, 1, 2018, 1));
+        choresList.add(new Chore("Swab the Poopdeck", true,"Ellen Harsha", RecurType.WEEKLY, 1, 1, 2018, 2));
+        choresList.add(new Chore("Buy Toilet Paper", true, "Tracey Lum", RecurType.WEEKLY, 1, 1, 2018, 3));
+        choresList.add(new Chore("Buy Guacamole", false, "Anna Sciaruto", RecurType.WEEKLY, 1, 1, 2018, 4));
+        choresList.add(new Chore("Feed the Fish", true, "Anna Sciaruto", RecurType.WEEKLY, 1, 1, 2018, 5));
+        choresList.add(new Chore("Scrub the Bathtub", true, "Anna Sciaruto", RecurType.WEEKLY, 1, 1, 2018, 6));
 
 
         return choresList;

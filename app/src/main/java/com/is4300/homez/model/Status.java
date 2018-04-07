@@ -22,10 +22,10 @@ public class Status {
     public static List<Status> generateMockStatusList() {
         List<Status> statusList = new ArrayList<>();
 
-        statusList.add(new Status("Anna Cullen", StatusType.HOME, 0));
-        statusList.add(new Status("Danielle Diraddo", StatusType.HOME, 0));
-        statusList.add(new Status("Emma Katz", StatusType.AWAY, 10));
-        statusList.add(new Status("Sophia Keins", StatusType.DO_NOT_DISTURB, 0));
+        statusList.add(new Status("Anna Sciaruto", StatusType.HOME, 0));
+        statusList.add(new Status("Ellen Harsha", StatusType.HOME, 0));
+        statusList.add(new Status("Lydia Auch", StatusType.AWAY, 10));
+        statusList.add(new Status("Tracey Lum", StatusType.DO_NOT_DISTURB, 0));
 
 
         return statusList;

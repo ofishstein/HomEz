@@ -36,10 +36,10 @@ public class RoommateModel {
 
     //  TEST 1 SUBJECTS
 
-    RoommateModel alex = new RoommateModel("Anna", "Cullen", "acullen@gmail.com");
-    RoommateModel raj = new RoommateModel("Danielle", "Diraddo", "diraddo.d@gmail.com");
-    RoommateModel zach = new RoommateModel("Emma", "Katz", "katz.e@gmail.com");
-    RoommateModel jonathan = new RoommateModel("Sophia", "Keins", "keinsoph.j@gmail.com");
+    RoommateModel alex = new RoommateModel("Anna", "Sciaruto", "annasc@gmail.com");
+    RoommateModel raj = new RoommateModel("Ellen", "Harsha", "harsha.e@gmail.com");
+    RoommateModel zach = new RoommateModel("Lydia", "Auch", "auch.lyd@gmail.com");
+    RoommateModel jonathan = new RoommateModel("Tracey", "Lun", "tlum@gmail.com");
 
     public RoommateModel getAlex() {
         return alex;
