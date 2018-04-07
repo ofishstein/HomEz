@@ -13,7 +13,7 @@
         android:gravity="center"
         android:lineSpacingExtra="@dimen/sm_margin"
         android:lines="2"
-        android:text="Today's date: April 4, 2018"
+        android:text="Today's date: April 7, 2018"
         android:textSize="20sp"
         android:textStyle="bold" />
 

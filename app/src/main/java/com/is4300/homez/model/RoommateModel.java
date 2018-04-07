@@ -34,14 +34,12 @@ public class RoommateModel {
     RoommateModel izzi = new RoommateModel("Izzi", "Tripp", "ian.leonard44@gmail.com");
     RoommateModel atamai = new RoommateModel("Atamai", "Tuiolosega", "ian.leonard44@gmail.com");
 
-    // PILOT TEST SUBJECTS
+    //  TEST 1 SUBJECTS
 
-    RoommateModel alex = new RoommateModel("Alex", "Melagrano", "melagrano.a@gmail.com");
-    RoommateModel raj = new RoommateModel("Raj", "Narayan", "narayan.r@gmail.com");
-    RoommateModel zach = new RoommateModel("Zach", "Lowen", "lowen.z@gmail.com");
-    RoommateModel jonathan = new RoommateModel("Jonathan", "Northcott", "northcott.j@gmail.com");
-    RoommateModel eli = new RoommateModel("Eli", "Foreman", "foreman.e@gmail.com");
-    RoommateModel eliza = new RoommateModel("Eliza", "Pedersen", "pedersen.e@gmail.com");
+    RoommateModel alex = new RoommateModel("Anna", "Cullen", "acullen@gmail.com");
+    RoommateModel raj = new RoommateModel("Danielle", "Diraddo", "diraddo.d@gmail.com");
+    RoommateModel zach = new RoommateModel("Emma", "Katz", "katz.e@gmail.com");
+    RoommateModel jonathan = new RoommateModel("Sophia", "Keins", "keinsoph.j@gmail.com");
 
     public RoommateModel getAlex() {
         return alex;
@@ -59,11 +57,4 @@ public class RoommateModel {
         return jonathan;
     }
 
-    public RoommateModel getEli() {
-        return eli;
-    }
-
-    public RoommateModel getEliza() {
-        return eliza;
-    }
 }

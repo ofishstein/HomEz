@@ -21,10 +21,10 @@ public class EventMock {
 
     public static List<EventMock> generateMockEventList() {
         List<EventMock> mockEvents = new ArrayList<>();
-        mockEvents.add(new EventMock("Wed", "5:30 PM",  "apartment showing"));
-        mockEvents.add(new EventMock("Thur","10:00 AM",  "Eliza study group (living room"));
-        mockEvents.add(new EventMock("Sat", "8:30 PM", "Zach's friends pregame (15+ people)"));
-        mockEvents.add(new EventMock("Sun", "7:00 AM",  "AndroidCon @ Pru"));
+        mockEvents.add(new EventMock("Sat", "5:30 PM",  "apartment showing"));
+        mockEvents.add(new EventMock("Sun","10:00 AM",  "Soph study group (living room"));
+        mockEvents.add(new EventMock("Sun", "8:30 PM", "Danielle pregame (6+ people)"));
+        mockEvents.add(new EventMock("Mon", "7:00 AM",  "Make pancakes"));
 
         return mockEvents;
     }

@@ -9,6 +9,8 @@
     android:paddingBottom="@dimen/med_margin"
     android:paddingTop="@dimen/med_margin">
 
+
+
     <TextView
         android:id="@+id/weekDay"
         android:layout_width="wrap_content"
