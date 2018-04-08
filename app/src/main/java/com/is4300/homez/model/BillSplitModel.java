@@ -49,7 +49,6 @@ public class BillSplitModel {
 
 
         sampleAssignees1.add(roommateModel.alex);
-        sampleAssignees1.add(roommateModel.eliza);
 
         // list of dummy assignees, part 2
         ArrayList<RoommateModel> sampleAssignees2 = new ArrayList<>();
@@ -68,7 +67,7 @@ public class BillSplitModel {
         BillSplitModel paymentMock2 = new BillSplitModel(roommateModel.eli, sampleAssignees2,  10.00,
                 "Burrito!", "11/05", false, payOrCharge.PAY); //connor pays izzi, PAY button
 
-        BillSplitModel paymentMock3 = new BillSplitModel(roommateModel.eliza, sampleAssignees3,  200.00,
+        BillSplitModel paymentMock3 = new BillSplitModel(roommateModel.zach, sampleAssignees3,  200.00,
                 "New TV", "10/15", true, payOrCharge.CHARGE); //connor charges oli and atamai, archived
 
         mockPayments.add(paymentMock1);

@@ -87,7 +87,7 @@ public class BillSplitActivity extends AppCompatActivity {
 
                 AlertDialog alertDialog = new AlertDialog.Builder(BillSplitActivity.this).create();
                 alertDialog.setTitle("PAYMENT CONFIRMATION");
-                alertDialog.setMessage(String.format("Pay Raj $5.75?"));
+                alertDialog.setMessage(String.format("Pay $5.75?"));
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -116,7 +116,7 @@ public class BillSplitActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Context context = getApplicationContext();
-                CharSequence text = "You've sent Raj a reminder!";
+                CharSequence text = "You've sent a reminder!";
                 int duration = Toast.LENGTH_LONG;
 
                 Toast toast = Toast.makeText(context, text, duration);
@@ -130,7 +130,7 @@ public class BillSplitActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Context context = getApplicationContext();
-                CharSequence text = "You've sent Eli a reminder!";
+                CharSequence text = "You've sent a reminder!";
                 int duration = Toast.LENGTH_LONG;
 
                 Toast toast = Toast.makeText(context, text, duration);
@@ -145,7 +145,7 @@ public class BillSplitActivity extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog alertDialog = new AlertDialog.Builder(BillSplitActivity.this).create();
                 alertDialog.setTitle("CHARGE CANCELLATION");
-                alertDialog.setMessage(String.format("Cancel charge to Eli for $8.00?"));
+                alertDialog.setMessage(String.format("Cancel charge for $8.00?"));
 
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Back", new DialogInterface.OnClickListener() {
                     @Override
@@ -176,7 +176,7 @@ public class BillSplitActivity extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog alertDialog = new AlertDialog.Builder(BillSplitActivity.this).create();
                 alertDialog.setTitle("CHARGE CANCELLATION");
-                alertDialog.setMessage(String.format("Cancel charge to Raj for $18.33?"));
+                alertDialog.setMessage(String.format("Cancel charge for $18.33?"));
 
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Back", new DialogInterface.OnClickListener() {
                     @Override
