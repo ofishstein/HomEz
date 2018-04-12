@@ -22,12 +22,11 @@ public class Status {
     public static List<Status> generateMockStatusList() {
         List<Status> statusList = new ArrayList<>();
 
-        statusList.add(new Status("Alex Melagrano", StatusType.HOME, 0));
-        statusList.add(new Status("Raj Narayan", StatusType.HOME, 0));
-        statusList.add(new Status("Zach Lowen", StatusType.AWAY, 10));
-        statusList.add(new Status("Jonathan Northcott", StatusType.AWAY, 120));
-        statusList.add(new Status("Eli Foreman", StatusType.DO_NOT_DISTURB, 0));
-        statusList.add(new Status("Eliza Pedersen", StatusType.DO_NOT_DISTURB, 0));
+        statusList.add(new Status("Ian Leonard", StatusType.HOME, 0));
+        statusList.add(new Status("Connor Rouan", StatusType.HOME, 0));
+        statusList.add(new Status("Oli Fishstein", StatusType.AWAY, 10));
+        statusList.add(new Status("Atamai Tuiolosega", StatusType.AWAY, 120));
+        statusList.add(new Status("Izzi Tripp", StatusType.DO_NOT_DISTURB, 0));
 
 
         return statusList;

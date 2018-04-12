@@ -21,9 +21,9 @@ public class EventMock {
 
     public static List<EventMock> generateMockEventList() {
         List<EventMock> mockEvents = new ArrayList<>();
-        mockEvents.add(new EventMock("Wed", "5:30 PM",  "apartment showing"));
-        mockEvents.add(new EventMock("Thur","10:00 AM",  "Eliza study group (living room"));
-        mockEvents.add(new EventMock("Sat", "8:30 PM", "Zach's friends pregame (15+ people)"));
+        mockEvents.add(new EventMock("Wed", "5:30 PM",  "Apartment Showing"));
+        mockEvents.add(new EventMock("Thur","10:00 AM",  "Connor Study Group"));
+        mockEvents.add(new EventMock("Sat", "8:30 PM", "Event with Beverages"));
         mockEvents.add(new EventMock("Sun", "7:00 AM",  "AndroidCon @ Pru"));
 
         return mockEvents;
